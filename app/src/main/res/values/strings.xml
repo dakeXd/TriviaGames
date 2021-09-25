@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TriviaGames</string>
+    <string name="init_mensage">Hola Mundo!</string>
 </resources>
