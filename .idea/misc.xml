@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/spinner_item_calculadora.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Davisaya/AndroidStudioProjects/TriviaGames/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Davisaya/AndroidStudioProjects/TriviaGames/app/src/main/res/layout/activity_questions.xml" value="0.33" />
+        <entry key="..\:/Users/Davisaya/AndroidStudioProjects/TriviaGames/app/src/main/res/layout/fragment_button_based.xml" value="0.16" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/activity_main.xml" value="0.28940217391304346" />
       </map>
     </option>
   </component>
