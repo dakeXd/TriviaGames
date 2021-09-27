@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private void loadMaxScorePlayers(){
         String txt_maxScore = "Puntuaciones maximas:\n";
         for(int i = 1; i <= MAX_SCORES_AMOUNT; i++)
-            txt_maxScore += i + "- " + preferences.getString("txt_max" + i, "") + " " +  preferences.getString("punt_max" + i, "") + "\n";
+            txt_maxScore += "\n" + i + "- " + preferences.getString("txt_max" + i, "") + " " +  preferences.getString("punt_max" + i, "") + "\n";
         tv_maxScore.setText(txt_maxScore);
     }
 }
