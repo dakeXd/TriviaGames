@@ -11,12 +11,15 @@
         android:theme="@style/Theme.TriviaGames">
         <activity
             android:name=".FinalScoreActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".QuestionsActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">TriviaGames</string>
-    <string name="init_mensage">Hola Mundo!</string>
+    <string name="nickname">Introduce tu nombre</string>
+    <string name="hint_nickanme">Tu nombre</string>
+    <string name="max_scores">Puntuaciones maximas:\n\n1-\n2-\n3-\n4-\n5-</string>
+    <string name="button_start">Empezar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

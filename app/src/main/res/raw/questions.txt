@@ -1,3 +1,4 @@
+total_preguntas#5
 1
 ¿Como se llama el protagonista del videojuego the legend of zelda?
 Link#1
