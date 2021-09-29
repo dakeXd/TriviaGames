@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.RadioButtonBasedFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="391sp"
+        android:layout_height="369sp">
 
+        <RadioGroup
+            android:layout_width="376dp"
+            android:layout_height="349dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:buttonTint="#710C0C"
+                android:fontFamily="@font/bungee"
+                android:text="Respuesta 1"
+                android:textAlignment="textStart" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:fontFamily="@font/bungee"
+                android:text="Respuesta 2" />
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:fontFamily="@font/bungee"
+                android:text="Respuesta 3" />
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:fontFamily="@font/bungee"
+                android:text="Respuesta 4" />
+
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
