@@ -69,8 +69,8 @@ public class SpinnerBasedFragment extends QuestionFragment {
         Spinner spinner1 = (Spinner) view.findViewById(R.id.spinner3);
         String [] opciones = {"caca", "culo"};
 
-        ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item_preguntas, opciones);
-        spinner1.setAdapter(adapter);
+        //ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item_preguntas, opciones);
+        //spinner1.setAdapter(adapter);
 
         return view;
     }
