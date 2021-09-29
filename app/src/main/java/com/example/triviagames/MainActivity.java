@@ -3,6 +3,7 @@ package com.example.triviagames;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("nick", nick);
         editor.commit();
+        Intent i = new Intent(this, QuestionsActivity.class);
+        startActivity(i);
 
     }
 

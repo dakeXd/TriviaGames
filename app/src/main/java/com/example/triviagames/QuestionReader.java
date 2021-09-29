@@ -1,6 +1,9 @@
 package com.example.triviagames;
 
+import android.content.res.Resources;
+
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.triviagames.fragments.ButtonBasedFragment;
@@ -23,6 +26,8 @@ public class QuestionReader {
     private static int actual_question = 0;
     private static int correct_questions = 0;
     private static Random random;
+    private static FragmentManager fragmentManager;
+    private static Resources resources;
 
     /**
      * @return the actual question number.
@@ -41,41 +46,42 @@ public class QuestionReader {
     /**
      * Restart and initialize the Question Reader variables
      */
-    public static void start(){
+    public static void start(FragmentManager fm, Resources r){
         random = new Random();
         asked = new int[MAX_QUESTIONS];
         for(int i = 0; i < MAX_QUESTIONS; i++){
             asked[i] = -1;
         }
+        fragmentManager = fm;
+        resources = r;
+        nextQuestion(false);
     }
 
 
     /**
      * Change the actual question fragment, loading a new question from the questions.txt document
-     * @param fragment the actual fragment
      * @param correct is the answer of the last question correct?
      */
-    public static void nextQuestion(Fragment fragment, boolean correct){
+    public static void nextQuestion(boolean correct){
         //If the last answer was correct, update correct_questions, in any case, update actual_question
         if(correct)
             correct_questions++;
         actual_question++;
 
         //Create a new fragment, load the questions and change fragment
-        FragmentTransaction ft = fragment.getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.fragmentContainerView, loadQuestion(fragment));
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        ft.replace(R.id.fragmentContainerView, loadQuestion(), "FRAGMENT_QUESTION");
         ft.commit();
     }
 
     /**
      * Load a new question from questions document
-     * @param fragment the actual fragment
      * @return the next fragment
      */
-    private static Fragment loadQuestion(Fragment fragment){
+    private static Fragment loadQuestion(){
         try {
             //Load a buffered reader from the questions document
-            BufferedReader br = new BufferedReader(new InputStreamReader(fragment.getContext().getResources().openRawResource(R.raw.questions)));
+            BufferedReader br = new BufferedReader(new InputStreamReader(resources.openRawResource(R.raw.questions)));
 
             //The first line of the document have the number of total questions
             String linea = br.readLine();
