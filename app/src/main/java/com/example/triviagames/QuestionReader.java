@@ -23,7 +23,7 @@ public class QuestionReader {
     public static final int ADDITIONAL_LINES_BY_QUESTION = 2;
     public static final int MAX_QUESTIONS = 10;
     private static int[] asked;                         //Questions index asked until now
-    private static int actual_question = 0;
+    private static int actual_question = -1;
     private static int correct_questions = 0;
     private static Random random;
     private static FragmentManager fragmentManager;
@@ -54,6 +54,8 @@ public class QuestionReader {
         }
         fragmentManager = fm;
         resources = r;
+        actual_question = -1;
+        correct_questions = 0;
         nextQuestion(false);
     }
 
@@ -95,6 +97,7 @@ public class QuestionReader {
             do {
                 nextQuestionIndex = random.nextInt(totalQuestions);
             }while (!checkQuestionIndex(nextQuestionIndex));
+            asked[actual_question] = nextQuestionIndex;
 
             //Skip all the lines necessary to reach the next question. (One line by question plus the additional lines by question defined in the constant)
             for(int i = 0; i < nextQuestionIndex*(QuestionFragment.MAX_ANSWERS+ADDITIONAL_LINES_BY_QUESTION); i++)
@@ -119,7 +122,7 @@ public class QuestionReader {
      * @return if the index is free to choose
      */
     private static boolean checkQuestionIndex(int index){
-        for(int i = 0; i< MAX_QUESTIONS; i++){
+        for(int i = 0; i< actual_question; i++){
             if(index == asked[i])
                 return false;
         }

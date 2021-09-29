@@ -1,5 +1,6 @@
 package com.example.triviagames.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,8 +11,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.triviagames.QuestionReader;
 import com.example.triviagames.QuestionsActivity;
 import com.example.triviagames.R;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +29,9 @@ public class ButtonBasedFragment extends QuestionFragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private Timer timer = new Timer();
     private Button buttons[] = new Button[QuestionFragment.MAX_ANSWERS];
+    private QuestionsActivity activity;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -71,12 +78,33 @@ public class ButtonBasedFragment extends QuestionFragment {
         buttons[2] = (Button) root.findViewById(R.id.button_answer3);
         buttons[3] = (Button) root.findViewById(R.id.button_answer4);
 
+        buttons[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(new int[]{1, 0, 0 , 0});
+            }
+        });
 
-        System.out.println(buttons[0].getText().toString());
-        System.out.println(buttons[1].getText().toString());
-        System.out.println(buttons[2].getText().toString());
-        System.out.println(buttons[3].getText().toString());
+        buttons[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(new int[]{0, 1, 0 , 0});
+            }
+        });
 
+        buttons[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(new int[]{0, 0, 1 , 0});
+            }
+        });
+
+        buttons[3].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(new int[]{0, 0, 0 , 1});
+            }
+        });
         start();
         return root;
     }
@@ -84,13 +112,31 @@ public class ButtonBasedFragment extends QuestionFragment {
     @Override
     public void start(){
         if(ready) {
-            System.out.println("START");
-            //tv_question.setText(question);
-            QuestionsActivity activity = (QuestionsActivity) getActivity();
+            activity = (QuestionsActivity) getActivity();
             activity.updateQuestion(question, questionImage);
             for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
                 buttons[i].setText(questions[i]);
             }
         }
+    }
+
+    @Override
+    public void checkAnswer(int answers[]) {
+        for(int i = 0; i < QuestionFragment.MAX_ANSWERS; i++){
+            if(answers[i]==1){
+                buttons[i].setBackgroundColor(Color.RED);
+            }
+            if(this.answers[i] == 1){
+                buttons[i].setBackgroundColor(Color.GREEN);
+            }
+            buttons[i].setOnClickListener(null);
+        }
+        boolean correct = isCorrect(answers);
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                QuestionReader.nextQuestion(correct);
+            }
+        }, TIME_MILIS_BETWEEN_QUESTIONS);
     }
 }

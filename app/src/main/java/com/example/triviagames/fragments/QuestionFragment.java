@@ -22,6 +22,7 @@ public class QuestionFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    public static final int TIME_MILIS_BETWEEN_QUESTIONS = 1000;
     public static final int MAX_ANSWERS = 4;
 
     protected String question;
@@ -113,7 +114,7 @@ public class QuestionFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_question, container, false);
     }
 
-    public boolean checkAnswer(int[] answers){
+    public boolean isCorrect(int[] answers){
         for(int i = 0; i < MAX_ANSWERS; i++){
             if(answers[i]!=this.answers[i])
                 return false;
@@ -122,6 +123,10 @@ public class QuestionFragment extends Fragment {
     }
 
     public void start(){
+
+    }
+
+    public void checkAnswer(int[] answers){
 
     }
 
