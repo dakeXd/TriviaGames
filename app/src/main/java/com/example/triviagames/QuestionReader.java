@@ -69,7 +69,9 @@ public class QuestionReader {
         if(correct)
             correct_questions++;
         actual_question++;
-
+        if(actual_question == MAX_QUESTIONS-1){
+            //TODO Load FinalScoreActivity
+        }
         //Create a new fragment, load the questions and change fragment
         FragmentTransaction ft = fragmentManager.beginTransaction();
         QuestionFragment nextFragment = loadQuestion();
