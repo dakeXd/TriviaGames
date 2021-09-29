@@ -10,19 +10,31 @@
         android:layout_width="391sp"
         android:layout_height="369sp">
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#335DC8"
+            android:fontFamily="@font/bungee"
+            android:text="@string/txt_botton_responder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <RadioGroup
-            android:layout_width="376dp"
-            android:layout_height="349dp"
+            android:layout_width="379dp"
+            android:layout_height="265dp"
             android:layout_marginStart="7dp"
             android:layout_marginTop="9dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"
                 android:layout_width="match_parent"
-                android:layout_height="87dp"
+                android:layout_height="65dp"
                 android:buttonTint="#710C0C"
                 android:fontFamily="@font/bungee"
                 android:text="Respuesta 1"
@@ -31,21 +43,21 @@
             <RadioButton
                 android:id="@+id/radioButton5"
                 android:layout_width="match_parent"
-                android:layout_height="87dp"
+                android:layout_height="65dp"
                 android:fontFamily="@font/bungee"
                 android:text="Respuesta 2" />
 
             <RadioButton
                 android:id="@+id/radioButton6"
                 android:layout_width="match_parent"
-                android:layout_height="87dp"
+                android:layout_height="65dp"
                 android:fontFamily="@font/bungee"
                 android:text="Respuesta 3" />
 
             <RadioButton
                 android:id="@+id/radioButton7"
                 android:layout_width="match_parent"
-                android:layout_height="87dp"
+                android:layout_height="65dp"
                 android:fontFamily="@font/bungee"
                 android:text="Respuesta 4" />
 
