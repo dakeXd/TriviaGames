@@ -5,7 +5,7 @@ Link#1
 Zelda#0
 Ganondorf#0
 Mario#0
-1
+2
 ¿Cuales de los siguientes son videojuegos de accion?
 Call of Duty#1
 Candy Crush#0
@@ -17,13 +17,13 @@ minecraft_logo#1
 terraria_logo#0
 mario_logo#0
 factorio_logo#0
-1
+4
 Selecciona el juego que salio con mayor anterioridad al mercado
 Minecraft#0
 Tetris#1
 Mario Bros#0
 BomberMan#0
-1
+5
 ¿Cual es el color principal de Waluigi en la saga Super Mario Bros?
 rojo#0
 verde#0

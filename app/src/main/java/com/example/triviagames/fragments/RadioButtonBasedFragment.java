@@ -1,5 +1,6 @@
 package com.example.triviagames.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
 
+import com.example.triviagames.QuestionsActivity;
 import com.example.triviagames.R;
 
 /**
@@ -25,6 +30,9 @@ public class RadioButtonBasedFragment extends QuestionFragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private RadioButton[] radioButtons = new RadioButton[MAX_ANSWERS];
+    private Button buttonNext;
 
     public RadioButtonBasedFragment() {
         // Required empty public constructor
@@ -61,6 +69,57 @@ public class RadioButtonBasedFragment extends QuestionFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_radio_button_based, container, false);
+        View root = inflater.inflate(R.layout.fragment_radio_button_based, container, false);
+
+
+        radioButtons[0] = (RadioButton) root.findViewById(R.id.radioButton3);
+        radioButtons[1] = (RadioButton) root.findViewById(R.id.radioButton5);
+        radioButtons[2] = (RadioButton) root.findViewById(R.id.radioButton6);
+        radioButtons[3] = (RadioButton) root.findViewById(R.id.radioButton7);
+        buttonNext = (Button) root.findViewById(R.id.button2);
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int answers[] = new int[MAX_ANSWERS];
+                for(int i = 0; i < MAX_ANSWERS; i++){
+                    if(radioButtons[i].isChecked()){
+                        answers[i] = 1;
+                    }else{
+                        answers[i] = 0;
+                    }
+                }
+                checkAnswer(answers);
+            }
+        });
+        start();
+
+        return root;
+    }
+
+    @Override
+    public void start(){
+        if(ready) {
+            QuestionsActivity activity;
+            activity = (QuestionsActivity) getActivity();
+            activity.updateQuestion(question, questionImage);
+            for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
+                radioButtons[i].setText(questions[i]);
+            }
+        }
+    }
+
+    @Override
+    public void checkAnswer(int answers[]) {
+        for(int i = 0; i < QuestionFragment.MAX_ANSWERS; i++){
+            if(answers[i]==1){
+                radioButtons[i].setBackgroundColor(Color.RED);
+            }
+            if(this.answers[i] == 1){
+                radioButtons[i].setBackgroundColor(Color.GREEN);
+            }
+        }
+        buttonNext.setOnClickListener(null);
+        boolean correct = isCorrect(answers);
+        waitForNext(correct);
     }
 }
