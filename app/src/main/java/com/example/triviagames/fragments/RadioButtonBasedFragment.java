@@ -15,7 +15,7 @@ import com.example.triviagames.R;
  * Use the {@link RadioButtonBasedFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RadioButtonBasedFragment extends Fragment {
+public class RadioButtonBasedFragment extends QuestionFragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

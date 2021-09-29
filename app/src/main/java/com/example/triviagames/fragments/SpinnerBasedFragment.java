@@ -15,7 +15,7 @@ import com.example.triviagames.R;
  * Use the {@link SpinnerBasedFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SpinnerBasedFragment extends Fragment {
+public class SpinnerBasedFragment extends QuestionFragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

@@ -12,21 +12,61 @@ import com.example.triviagames.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ImageButtonBasedFragment#newInstance} factory method to
+ * Use the {@link QuestionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ImageButtonBasedFragment extends QuestionFragment {
+public class QuestionFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    public static final int MAX_ANSWERS = 4;
+
+    protected String question;
+    protected String[] questions;
+    protected int[] answers;
+    protected String questionImage;
+
+    public String getQuestionImage() {
+        return questionImage;
+    }
+
+    public void setQuestionImage(String questionImage) {
+        this.questionImage = questionImage;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String[] getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(String[] questions) {
+        this.questions = questions;
+    }
+
+    public int[] getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(int[] answers) {
+        this.answers = answers;
+    }
+
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public ImageButtonBasedFragment() {
+    public QuestionFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +76,11 @@ public class ImageButtonBasedFragment extends QuestionFragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ImageButtonBasedFragment.
+     * @return A new instance of fragment QuestionFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ImageButtonBasedFragment newInstance(String param1, String param2) {
-        ImageButtonBasedFragment fragment = new ImageButtonBasedFragment();
+    public static QuestionFragment newInstance(String param1, String param2) {
+        QuestionFragment fragment = new QuestionFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +101,16 @@ public class ImageButtonBasedFragment extends QuestionFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_image_button_based, container, false);
+        return inflater.inflate(R.layout.fragment_question, container, false);
     }
+
+    public boolean checkAnswer(int[] answers){
+        for(int i = 0; i < MAX_ANSWERS; i++){
+            if(answers[i]!=this.answers[i])
+                return false;
+        }
+        return true;
+    }
+
+
 }
