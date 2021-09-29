@@ -17,12 +17,10 @@
             android:backgroundTint="#335DC8"
             android:fontFamily="@font/bungee"
             android:text="Respuesta 1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintBottom_toBottomOf="@+id/group"
+            app:layout_constraintEnd_toEndOf="@+id/group"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.204" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_answer2"
@@ -32,12 +30,10 @@
             android:fontFamily="@font/bungee"
             android:text="Mortal Kombat"
             android:textAlignment="gravity"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/group"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.93"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.204" />
+            app:layout_constraintStart_toStartOf="@+id/group"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_answer3"
@@ -48,10 +44,8 @@
             android:text="Respuesta 4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.93"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.686" />
+            app:layout_constraintStart_toStartOf="@+id/group"
+            app:layout_constraintTop_toTopOf="@+id/group" />
 
         <Button
             android:id="@+id/button_answer4"
@@ -61,11 +55,18 @@
             android:fontFamily="@font/bungee"
             android:text="Respuesta 3"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintEnd_toEndOf="@+id/group"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.686" />
+            app:layout_constraintTop_toTopOf="@+id/group" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
