@@ -28,6 +28,15 @@ public class QuestionFragment extends Fragment {
     protected String[] questions;
     protected int[] answers;
     protected String questionImage;
+    protected boolean ready = false;
+
+    public boolean isReady() {
+        return ready;
+    }
+
+    public void setReady(boolean ready) {
+        this.ready = ready;
+    }
 
     public String getQuestionImage() {
         return questionImage;
@@ -110,6 +119,10 @@ public class QuestionFragment extends Fragment {
                 return false;
         }
         return true;
+    }
+
+    public void start(){
+
     }
 
 

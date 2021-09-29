@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_answer1"
             android:layout_width="160dp"
             android:layout_height="66dp"
             android:layout_marginStart="16dp"
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_answer2"
             android:layout_width="160dp"
             android:layout_height="66dp"
             android:layout_marginTop="62dp"
@@ -36,7 +36,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button_answer3"
             android:layout_width="160dp"
             android:layout_height="66dp"
             android:layout_marginEnd="16dp"
@@ -48,7 +48,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/button_answer4"
             android:layout_width="160dp"
             android:layout_height="66dp"
             android:layout_marginStart="16dp"

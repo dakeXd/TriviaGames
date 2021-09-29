@@ -1,29 +1,29 @@
 total_preguntas#5
 1
-¿Como se llama el protagonista del videojuego the legend of zelda?
+¿Como se llama el protagonista del videojuego the legend of zelda?#logo_trivia
 Link#1
 Zelda#0
 Ganondorf#0
 Mario#0
-2
+1
 ¿Cuales de los siguientes son videojuegos de accion?
 Call of Duty#1
 Candy Crush#0
 Zoo Tycoon#0
 Mortal Kombat#1
-3
+1
 ¿Cual de las siguientes imagenes es el logo de Minecraft?
-minecraft_logo.png#1
-terraria_logo.png#0
-mario_logo.png#0
-factorio_logo.png#0
-5
+minecraft_logo#1
+terraria_logo#0
+mario_logo#0
+factorio_logo#0
+1
 Selecciona el juego que salio con mayor anterioridad al mercado
 Minecraft#0
 Tetris#1
 Mario Bros#0
 BomberMan#0
-4
+1
 ¿Cual es el color principal de Waluigi en la saga Super Mario Bros?
 rojo#0
 verde#0

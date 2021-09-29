@@ -70,7 +70,8 @@ public class QuestionReader {
 
         //Create a new fragment, load the questions and change fragment
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.fragmentContainerView, loadQuestion(), "FRAGMENT_QUESTION");
+        QuestionFragment nextFragment = loadQuestion();
+        ft.replace(R.id.fragmentContainerView, nextFragment, "FRAGMENT_QUESTION");
         ft.commit();
     }
 
@@ -78,7 +79,7 @@ public class QuestionReader {
      * Load a new question from questions document
      * @return the next fragment
      */
-    private static Fragment loadQuestion(){
+    private static QuestionFragment loadQuestion(){
         try {
             //Load a buffered reader from the questions document
             BufferedReader br = new BufferedReader(new InputStreamReader(resources.openRawResource(R.raw.questions)));
@@ -102,7 +103,7 @@ public class QuestionReader {
 
 
             //Instantiate and return the new fragment
-            Fragment nextFragment = createFragment(br);
+            QuestionFragment nextFragment = createFragment(br);
             br.close();
 
             return nextFragment;
@@ -139,6 +140,7 @@ public class QuestionReader {
 
             //The fragment variables
             String question;
+            String questionImage;
             String questions[] = new String[QuestionFragment.MAX_ANSWERS];
             int answers[] = new int[QuestionFragment.MAX_ANSWERS];
 
@@ -161,8 +163,9 @@ public class QuestionReader {
                     break;
             }
             //The first line is the question
-            question = br.readLine();
-
+            String questionArray[] = br.readLine().split("#");
+            question =  questionArray[0];
+            questionImage = questionArray.length > 1 ? questionArray[1] : null;
             //The next lines have each answer and if that answer is true or false.
             for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
                 String nextLine[] = br.readLine().split("#");
@@ -172,8 +175,10 @@ public class QuestionReader {
 
             //Set the Fragment variables.
             nextFragment.setQuestion(question);
+            nextFragment.setQuestionImage(questionImage);
             nextFragment.setAnswers(answers);
             nextFragment.setQuestions(questions);
+            nextFragment.setReady(true);
 
             return nextFragment;
         } catch (IOException e) {
