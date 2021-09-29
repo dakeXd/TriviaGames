@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/bungee"
         android:text="@string/nickname"
         android:textAlignment="center"
@@ -18,22 +18,22 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView_maxScore"
-        android:layout_width="376dp"
+        android:layout_width="350dp"
         android:layout_height="200dp"
         android:background="#775081F6"
         android:fontFamily="@font/bungee"
         android:text="@string/max_scores"
+        android:textColor="#000000"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_start"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <EditText
         android:id="@+id/et_nickname"
@@ -80,8 +80,14 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="305dp"
+        android:layout_width="186dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo"
+        android:scaleType="centerInside"
+        android:scaleX="1"
+        android:scaleY="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

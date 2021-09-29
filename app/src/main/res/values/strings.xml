@@ -4,7 +4,14 @@
     <string name="hint_nickanme">Tu nombre</string>
     <string name="max_scores">Puntuaciones maximas:\n\n\n1-\n\n2-\n\n3-\n\n4-\n\n5-</string>
     <string name="button_start">Empezar</string>
+    <string name="txt_botton_responder">Responder</string>
+    <string name="example">example text</string>
+    <string name="back">Menu principal</string>
+    <string name="pregunta">Pregunta</string>
+    <string name="image">Imagen pregunta</string>
+    <string name="num_pregunta">1/10</string>
+    <string name="logo">logo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="txt_botton_responder">Responder</string>
+
 </resources>

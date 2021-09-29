@@ -16,12 +16,13 @@
             android:layout_height="66dp"
             android:backgroundTint="#335DC8"
             android:fontFamily="@font/bungee"
-            android:text="Respuesta 1"
+            android:text="@string/example"
             app:layout_constraintBottom_toBottomOf="@+id/group"
             app:layout_constraintEnd_toEndOf="@+id/group"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.7"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/button_answer2"
@@ -29,7 +30,7 @@
             android:layout_height="66dp"
             android:backgroundTint="#335DC8"
             android:fontFamily="@font/bungee"
-            android:text="Mortal Kombat"
+            android:text="@string/example"
             android:textAlignment="gravity"
             app:layout_constraintBottom_toTopOf="@+id/group"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +44,7 @@
             android:layout_height="66dp"
             android:backgroundTint="#335DC8"
             android:fontFamily="@font/bungee"
-            android:text="Respuesta 4"
+            android:text="@string/example"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/group"
@@ -56,7 +57,7 @@
             android:layout_height="66dp"
             android:backgroundTint="#335DC8"
             android:fontFamily="@font/bungee"
-            android:text="Respuesta 3"
+            android:text="@string/example"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/group"
             app:layout_constraintStart_toStartOf="parent"
