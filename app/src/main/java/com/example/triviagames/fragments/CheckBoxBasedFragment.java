@@ -1,5 +1,7 @@
 package com.example.triviagames.fragments;
 
+import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +9,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 
+import com.example.triviagames.QuestionsActivity;
 import com.example.triviagames.R;
 
 /**
@@ -25,6 +30,9 @@ public class CheckBoxBasedFragment extends QuestionFragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private CheckBox[] checkBoxes = new CheckBox[MAX_ANSWERS];
+    private Button buttonNext;
 
     public CheckBoxBasedFragment() {
         // Required empty public constructor
@@ -61,6 +69,55 @@ public class CheckBoxBasedFragment extends QuestionFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_check_box_based, container, false);
+        View root = inflater.inflate(R.layout.fragment_check_box_based, container, false);
+
+        checkBoxes[0] = (CheckBox) root.findViewById(R.id.checkBox1);
+        checkBoxes[1] = (CheckBox) root.findViewById(R.id.checkBox2);
+        checkBoxes[2] = (CheckBox) root.findViewById(R.id.checkBox3);
+        checkBoxes[3] = (CheckBox) root.findViewById(R.id.checkBox4);
+        buttonNext = (Button) root.findViewById(R.id.button3);
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int answers[] = new int[MAX_ANSWERS];
+                for(int i = 0; i < MAX_ANSWERS; i++){
+                    if(checkBoxes[i].isChecked()){
+                        answers[i] = 1;
+                    }else{
+                        answers[i] = 0;
+                    }
+                }
+                checkAnswer(answers);
+            }
+        });
+        start();
+        return root;
+    }
+
+    @Override
+    public void start(){
+        if(ready) {
+            QuestionsActivity activity;
+            activity = (QuestionsActivity) getActivity();
+            activity.updateQuestion(question, questionImage);
+            for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
+                checkBoxes[i].setText(questions[i]);
+            }
+        }
+    }
+
+    @Override
+    public void checkAnswer(int answers[]) {
+        for(int i = 0; i < QuestionFragment.MAX_ANSWERS; i++){
+            if(answers[i]==1){
+                checkBoxes[i].setBackgroundColor(Color.RED);
+            }
+            if(this.answers[i] == 1){
+                checkBoxes[i].setBackgroundColor(Color.GREEN);
+            }
+        }
+        buttonNext.setOnClickListener(null);
+        boolean correct = isCorrect(answers);
+        waitForNext(correct);
     }
 }

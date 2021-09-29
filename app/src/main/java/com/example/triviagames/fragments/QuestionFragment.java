@@ -8,7 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.triviagames.QuestionReader;
 import com.example.triviagames.R;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,6 +34,7 @@ public class QuestionFragment extends Fragment {
     protected int[] answers;
     protected String questionImage;
     protected boolean ready = false;
+    private Timer timer = new Timer();
 
     public boolean isReady() {
         return ready;
@@ -128,6 +133,15 @@ public class QuestionFragment extends Fragment {
 
     public void checkAnswer(int[] answers){
 
+    }
+
+    protected void waitForNext(boolean correct){
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                QuestionReader.nextQuestion(correct);
+            }
+        }, TIME_MILIS_BETWEEN_QUESTIONS);
     }
 
 

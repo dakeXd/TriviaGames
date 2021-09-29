@@ -1,5 +1,6 @@
 package com.example.triviagames.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,8 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
+import com.example.triviagames.QuestionsActivity;
 import com.example.triviagames.R;
 
 /**
@@ -28,6 +32,9 @@ public class SpinnerBasedFragment extends QuestionFragment {
     private String mParam1;
     private String mParam2;
 
+    private Spinner spinner;
+    private Button buttonNext;
+    private TextView tv;
 
     public SpinnerBasedFragment() {
         // Required empty public constructor
@@ -66,12 +73,57 @@ public class SpinnerBasedFragment extends QuestionFragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_spinner_based, container, false);
 
-        Spinner spinner1 = (Spinner) view.findViewById(R.id.spinner3);
-        String [] opciones = {"caca", "culo"};
+        spinner= (Spinner) view.findViewById(R.id.spinner3);
+        buttonNext = (Button) view.findViewById(R.id.button);
+        tv = (TextView) view.findViewById(R.id.textView3);
 
-        //ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item_preguntas, opciones);
-        //spinner1.setAdapter(adapter);
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int answers[] = new int[MAX_ANSWERS];
 
+                for(int i = 0; i < MAX_ANSWERS; i++){
+                    answers[i] = 0;
+                }
+                answers[spinner.getSelectedItemPosition()] = 1;
+                checkAnswer(answers);
+
+            }
+        });
+        start();
         return view;
+    }
+
+    @Override
+    public void start(){
+        if(ready) {
+            QuestionsActivity activity;
+            activity = (QuestionsActivity) getActivity();
+            activity.updateQuestion(question, questionImage);
+            ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.support_simple_spinner_dropdown_item, questions);
+            spinner.setAdapter(adapter);
+
+        }
+    }
+
+    @Override
+    public void checkAnswer(int answers[]) {
+        if(this.answers[spinner.getSelectedItemPosition()]==1){
+            spinner.setBackgroundColor(Color.GREEN);
+            tv.setTextColor(Color.GREEN);
+            tv.setText("¡Respuesta correcta!");
+        }else {
+            spinner.setBackgroundColor(Color.RED);
+            tv.setTextColor(Color.RED);
+            String respuesta = "";
+            for(int i = 0; i < MAX_ANSWERS; i++){
+                if(this.answers[i]==1)
+                    respuesta=questions[i];
+            }
+            tv.setText("La respuesta correcta era:   " + respuesta);
+        }
+        buttonNext.setOnClickListener(null);
+        boolean correct = isCorrect(answers);
+        waitForNext(correct);
     }
 }

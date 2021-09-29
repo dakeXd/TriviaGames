@@ -17,11 +17,15 @@ import android.widget.TextView;
 import com.example.triviagames.fragments.ButtonBasedFragment;
 import com.example.triviagames.fragments.QuestionFragment;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class QuestionsActivity extends AppCompatActivity {
 
     private TextView tv_question, tv_puntuacion;
     private ImageView iv_question;
     private Button button_back;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +64,8 @@ public class QuestionsActivity extends AppCompatActivity {
         }
 
     }
+
+
 
 
 
