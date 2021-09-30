@@ -1,4 +1,4 @@
-total_preguntas#5
+total_preguntas#17
 1
 ¿Como se llama el protagonista del videojuego the legend of zelda?#logo_trivia
 Link#1
@@ -29,4 +29,76 @@ rojo#0
 verde#0
 amarillo#0
 morado#1
+1
+¿Donde está Morrowind respecto a Skyrim?
+Al oeste#0
+Al este#1
+Al sur#0
+Al norte#0
+1
+¿Quien compuso la banda sonora de Half Life 2?
+Martin O'Donnell#0
+Jeremy Soule#0
+Sonia y Selena#0
+Kelly Bailey#1
+4
+¿En que version de Pokemon puedes conseguir un Latias?
+Edicion Blanca 2#1
+Edicion Negra 2 #0
+Edicion Esmeralda#0
+Edicion Rojo#0
+1
+¿Cuáles son los dos luchadores que siempre han aparecido en todas las versiones de Street Fighter?
+Ken y Blanca#0
+Ryu y M.Bison#0
+Ken y Guile#0
+Ken y Ryu#1
+4
+¿Cuánto tiempo se tenía para terminar Principe de Persia?
+120 minutos#
+40 minutos#0
+30 minutos#0
+60 minutos#1
+4
+¿Cómo se llama el hijo adoptado de Heihachi de Tekken?
+Liuhachi#0
+Kazuya#1
+Kasumi#0
+Lars#0
+5
+¿Qué instrumento de viento suele usar Link de The Legend of Zelda?
+Flauta#0
+Armonica#0
+Saxofón#0
+Ocarina#1
+4
+¿De qué personaje busca venganza Kratos en God of war?
+Atenea#0
+Zeus#0
+Ares#1
+Poseidon#0
+1
+¿Cómo se llama la institución mental que sirve de escenario a Outlast?
+Hospital Severalls#0
+Hospital Estatal de Filadelfia#0
+Mount Massive#1
+Hospital Whittingham#0
+5
+¿Cómo se llama el protagonista de Halo?
+Jefe Maestro#1
+John#0
+Comandante Total#0
+Soldado Maestro#0
+5
+¿En qué año fue lanzado Super Mario 64?
+1995#0
+1996#1
+1998#0
+1999#0
+1
+¿Cómo se llama el fundador de la compañía Nintendo?
+Shigeru Miyamoto#0
+Satoru Iwata#0
+Hideo Kojima#0
+Fusajiro Yamauchi#1
 //1-ButtonBasedQuestion, 2-CheckBoxBasedQuestion(multiOption), 3-ImageButtonBasedQuestion, 4-RadioButtonBasedQuestion, 5-SpinnerBasedQuestion. 1-Respuesta Correcta, 0-Respuesta incorrecta
