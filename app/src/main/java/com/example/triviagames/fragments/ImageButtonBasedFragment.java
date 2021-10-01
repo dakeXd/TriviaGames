@@ -126,11 +126,11 @@ public class ImageButtonBasedFragment extends QuestionFragment {
     public void checkAnswer(int answers[]) {
         for(int i = 0; i < QuestionFragment.MAX_ANSWERS; i++){
             if(answers[i]==1){
-                ImageViewCompat.setImageTintList(buttons[i], ColorStateList.valueOf(getResources().getColor(R.color.correctTint)));
+                ImageViewCompat.setImageTintList(buttons[i], ColorStateList.valueOf(getResources().getColor(R.color.wrongTint)));
             }
 
             if(this.answers[i] == 1){
-                ImageViewCompat.setImageTintList(buttons[i], ColorStateList.valueOf(getResources().getColor(R.color.wrongTint)));
+                ImageViewCompat.setImageTintList(buttons[i], ColorStateList.valueOf(getResources().getColor(R.color.correctTint)));
             }
             buttons[i].setOnClickListener(null);
         }

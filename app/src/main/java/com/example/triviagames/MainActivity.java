@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    final int MAX_SCORES_AMOUNT = 5;
+    public static final int MAX_SCORES_AMOUNT = 5;
 
     private EditText et_nickName;
     private Button button_start;
@@ -35,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        loadMaxScorePlayers();
     }
 
     private void initValues(){
