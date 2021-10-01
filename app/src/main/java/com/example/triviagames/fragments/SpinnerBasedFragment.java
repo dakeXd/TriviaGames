@@ -100,7 +100,7 @@ public class SpinnerBasedFragment extends QuestionFragment {
             QuestionsActivity activity;
             activity = (QuestionsActivity) getActivity();
             activity.updateQuestion(question, questionImage);
-            ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.support_simple_spinner_dropdown_item, questions);
+            ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item_preguntas, questions);
             spinner.setAdapter(adapter);
 
         }

@@ -1,13 +1,21 @@
 package com.example.triviagames.fragments;
 
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.core.widget.ImageViewCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.example.triviagames.QuestionsActivity;
 import com.example.triviagames.R;
 
 /**
@@ -22,9 +30,12 @@ public class ImageButtonBasedFragment extends QuestionFragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private ImageButton buttons[] = new ImageButton[QuestionFragment.MAX_ANSWERS];
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     public ImageButtonBasedFragment() {
         // Required empty public constructor
@@ -61,6 +72,69 @@ public class ImageButtonBasedFragment extends QuestionFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_image_button_based, container, false);
+        View root = inflater.inflate(R.layout.fragment_image_button_based, container, false);
+        buttons[0] = (ImageButton) root.findViewById(R.id.imageButton);
+        buttons[1] = (ImageButton) root.findViewById(R.id.imageButton2);
+        buttons[2] = (ImageButton) root.findViewById(R.id.imageButton3);
+        buttons[3] = (ImageButton) root.findViewById(R.id.imageButton4);
+        buttons[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(new int[]{1, 0, 0 , 0});
+            }
+        });
+
+        buttons[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(new int[]{0, 1, 0 , 0});
+            }
+        });
+
+        buttons[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(new int[]{0, 0, 1 , 0});
+            }
+        });
+
+        buttons[3].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer(new int[]{0, 0, 0 , 1});
+            }
+        });
+        start();
+        return root;
+    }
+
+    @Override
+    public void start(){
+        if(ready) {
+            QuestionsActivity activity;
+            activity = (QuestionsActivity) getActivity();
+            activity.updateQuestion(question, questionImage);
+            for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
+                Resources resources = getResources();
+                Drawable imageId = resources.getDrawable(resources.getIdentifier(questions[i], "drawable", getContext().getPackageName()));
+                buttons[i].setImageDrawable(imageId);
+            }
+        }
+    }
+
+    @Override
+    public void checkAnswer(int answers[]) {
+        for(int i = 0; i < QuestionFragment.MAX_ANSWERS; i++){
+            if(answers[i]==1){
+                ImageViewCompat.setImageTintList(buttons[i], ColorStateList.valueOf(getResources().getColor(R.color.correctTint)));
+            }
+
+            if(this.answers[i] == 1){
+                ImageViewCompat.setImageTintList(buttons[i], ColorStateList.valueOf(getResources().getColor(R.color.wrongTint)));
+            }
+            buttons[i].setOnClickListener(null);
+        }
+        boolean correct = isCorrect(answers);
+        waitForNext(correct);
     }
 }

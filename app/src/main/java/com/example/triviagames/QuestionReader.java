@@ -1,5 +1,7 @@
 package com.example.triviagames;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 
 import androidx.fragment.app.Fragment;
@@ -69,14 +71,19 @@ public class QuestionReader {
         if(correct)
             correct_questions++;
         actual_question++;
-        if(actual_question == MAX_QUESTIONS-1){
+        if(actual_question == MAX_QUESTIONS){
             //TODO Load FinalScoreActivity
+            Activity activity = fragmentManager.findFragmentByTag("FRAGMENT_QUESTION").getActivity();
+            Intent i = new Intent(activity, FinalScoreActivity.class);
+            activity.startActivity(i);
+            activity.finish();
+        }else {
+            //Create a new fragment, load the questions and change fragment
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            QuestionFragment nextFragment = loadQuestion();
+            ft.replace(R.id.fragmentContainerView, nextFragment, "FRAGMENT_QUESTION");
+            ft.commit();
         }
-        //Create a new fragment, load the questions and change fragment
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        QuestionFragment nextFragment = loadQuestion();
-        ft.replace(R.id.fragmentContainerView, nextFragment, "FRAGMENT_QUESTION");
-        ft.commit();
     }
 
     /**

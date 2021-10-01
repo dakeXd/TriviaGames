@@ -11,7 +11,7 @@ Call of Duty#1
 Candy Crush#0
 Zoo Tycoon#0
 Mortal Kombat#1
-1
+3
 ¿Cual de las siguientes imagenes es el logo de Minecraft?
 minecraft_logo#1
 terraria_logo#0
@@ -55,7 +55,7 @@ Ken y Guile#0
 Ken y Ryu#1
 4
 ¿Cuánto tiempo se tenía para terminar Principe de Persia?
-120 minutos#
+120 minutos#0
 40 minutos#0
 30 minutos#0
 60 minutos#1
