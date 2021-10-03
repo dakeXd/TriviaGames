@@ -10,4 +10,5 @@
     <color name="error">#B30909</color>
     <color name="wrongTint">#80FF0000</color>
     <color name="correctTint">#8000FF00</color>
+    <color name="hint">#80606060</color>
 </resources>
