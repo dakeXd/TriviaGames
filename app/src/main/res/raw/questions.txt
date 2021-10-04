@@ -25,10 +25,10 @@ Mario Bros#0
 BomberMan#0
 5
 ¿Cual es el color principal de Waluigi en la saga Super Mario Bros?
-rojo#0
-verde#0
-amarillo#0
-morado#1
+Rojo#0
+Verde#0
+Amarillo#0
+Morado#1
 1
 ¿Donde está Morrowind respecto a Skyrim?
 Al oeste#0
@@ -61,8 +61,8 @@ Ken y Ryu#1
 60 minutos#1
 4
 ¿Cómo se llama el hijo adoptado de Heihachi de Tekken?
-Liuhachi#0
-Kazuya#1
+liuhachi_foto#0
+kazuya_foto#1
 Kasumi#0
 Lars#0
 5
