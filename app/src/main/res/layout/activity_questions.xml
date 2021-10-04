@@ -6,15 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".QuestionsActivity">
 
-    <Button
+    <ImageView
+        android:id="@+id/background_image2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_new_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#335DC8"
-        android:fontFamily="@font/bungee"
+        android:fontFamily="@font/p5hatty"
+        android:padding="10dp"
+        android:rotationX="25"
+        android:rotationY="10"
         android:text="@string/back"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,45 +40,55 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/bungee"
+        android:fontFamily="@font/p5hatty"
+        android:rotationX="8"
+        android:rotationY="12"
         android:text="@string/pregunta"
         android:textAlignment="center"
         android:textColor="?android:textColorSecondary"
-        android:textSize="12sp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_question"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_question"
-        android:layout_width="385dp"
-        android:layout_height="47dp"
-        android:fontFamily="@font/bungee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:fontFamily="@font/p5hatty"
+        android:padding="8dp"
+        android:rotationX="-8"
+        android:rotationY="-16"
         android:text="@string/example"
         android:textAlignment="center"
         android:textColor="?android:textColorPrimary"
-        android:textSize="14sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
+        app:layout_constraintVertical_bias="0.173" />
 
     <TextView
         android:id="@+id/tv_puntuacion"
         android:layout_width="47dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/bungee"
-        android:textColor="?android:textColorPrimary"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/p5hatty"
+        android:rotation="12"
+        android:rotationX="8"
         android:text="@string/num_pregunta"
         android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.example.triviagames.fragments.ButtonBasedFragment"
+        android:name="com.example.triviagames.fragments.RadioButtonBasedFragment"
         android:layout_width="391dp"
         android:layout_height="369dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,4 +109,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_question"
         app:srcCompat="@drawable/logo_trivia" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
 </androidx.constraintlayout.widget.ConstraintLayout>

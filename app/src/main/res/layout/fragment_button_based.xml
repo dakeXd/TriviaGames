@@ -10,56 +10,68 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_answer1"
             android:layout_width="160dp"
             android:layout_height="66dp"
-            android:backgroundTint="#335DC8"
-            android:fontFamily="@font/bungee"
+            android:fontFamily="@font/p5hatty"
+            android:rotationX="8"
+            android:rotationY="20"
             android:text="@string/example"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/group"
             app:layout_constraintEnd_toEndOf="@+id/group"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.7"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_answer2"
             android:layout_width="160dp"
             android:layout_height="66dp"
-            android:backgroundTint="#335DC8"
-            android:fontFamily="@font/bungee"
+            android:fontFamily="@font/p5hatty"
+            android:rotationX="8"
+            android:rotationY="-20"
             android:text="@string/example"
             android:textAlignment="gravity"
+            android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/group"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="@+id/group"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.7" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_answer3"
             android:layout_width="160dp"
             android:layout_height="66dp"
-            android:backgroundTint="#335DC8"
-            android:fontFamily="@font/bungee"
+            android:fontFamily="@font/p5hatty"
+            android:rotationX="-8"
+            android:rotationY="-20"
             android:text="@string/example"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="@+id/group"
             app:layout_constraintTop_toTopOf="@+id/group"
             app:layout_constraintVertical_bias="0.3" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_answer4"
             android:layout_width="160dp"
             android:layout_height="66dp"
-            android:backgroundTint="#335DC8"
-            android:fontFamily="@font/bungee"
+            android:fontFamily="@font/p5hatty"
+            android:rotationX="-8"
+            android:rotationY="20"
             android:text="@string/example"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/group"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/group"
             app:layout_constraintVertical_bias="0.3" />
