@@ -21,37 +21,44 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/bungee"
+        android:background="@drawable/border"
+        android:fontFamily="@font/p5hatty"
+        android:padding="8dp"
+        android:rotationX="20"
+        android:rotationY="-8"
         android:text="@string/nickname"
         android:textAlignment="center"
-        android:textColor="?android:textColorPrimary"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView_maxScore"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:background="#775081F6"
-        android:fontFamily="@font/bungee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:fontFamily="@font/p5hatty"
+        android:padding="10dp"
+        android:rotationX="5"
+        android:rotationY="-8"
         android:text="@string/max_scores"
-        android:textColor="?android:textColorPrimary"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/button_start"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.68" />
 
     <EditText
         android:id="@+id/et_nickname"
         android:layout_width="0dp"
-        android:layout_height="54dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="16dp"
@@ -61,6 +68,7 @@
         android:gravity="center"
         android:hint="@string/hint_nickanme"
         android:inputType="textPersonName"
+        android:padding="8dp"
         android:rotationX="20"
         android:rotationY="-8"
         android:textColor="@color/white"
@@ -71,16 +79,16 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/border_inverted"
-        android:fontFamily="@font/bungee"
+        android:layout_marginTop="10dp"
+        android:minHeight="48dp"
+        android:rotationX="-10"
+        android:rotationY="-13"
         android:text="@string/button_start"
-        android:textSize="15sp"
-        app:backgroundTint="#FFFFFF"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_nickname" />
@@ -102,7 +110,10 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:adjustViewBounds="true"
+        android:background="@drawable/border_inverted"
         android:contentDescription="@string/logo"
+        android:rotation="4"
+        android:rotationX="2"
         android:scaleType="centerInside"
         android:scaleX="1"
         android:scaleY="1"
@@ -117,14 +128,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.01" />
+        app:layout_constraintGuide_percent="0.03" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
