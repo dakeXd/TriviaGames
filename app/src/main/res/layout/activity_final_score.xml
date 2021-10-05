@@ -50,10 +50,10 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.13" />
 
     <TextView
         android:id="@+id/tv_maxPuntuacion"
@@ -73,6 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_finalScore"
         app:layout_constraintVertical_bias="0.19" />
 
+
     <TextView
         android:id="@+id/tv_message"
         android:layout_width="0dp"
@@ -88,10 +89,10 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/tv_maxPuntuacion"
-        app:layout_constraintVertical_bias="0.548" />
-
+        app:layout_constraintVertical_bias="0.299" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"

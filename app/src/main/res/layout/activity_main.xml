@@ -48,12 +48,13 @@
         android:rotationY="-8"
         android:text="@string/max_scores"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="23sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/button_start"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintTop_toBottomOf="@+id/et_nickname"
+        app:layout_constraintVertical_bias="0.75" />
 
     <EditText
         android:id="@+id/et_nickname"
@@ -83,15 +84,17 @@
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:minHeight="48dp"
         android:rotationX="-10"
         android:rotationY="-13"
         android:text="@string/button_start"
-        android:textSize="34sp"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nickname" />
+        app:layout_constraintTop_toBottomOf="@+id/et_nickname"
+        app:layout_constraintVertical_bias="0.04000002" />
 
     <TextView
         android:id="@+id/textView_error"

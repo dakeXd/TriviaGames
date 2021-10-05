@@ -24,9 +24,10 @@
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/group2"
-            app:layout_constraintVertical_bias="0.875" />
+            app:layout_constraintVertical_bias="0.725" />
 
         <CheckBox
             android:id="@+id/checkBox1"
@@ -44,7 +45,7 @@
             app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.25" />
 
         <CheckBox
             android:id="@+id/checkBox3"
@@ -62,7 +63,7 @@
             app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/group2"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <CheckBox
             android:id="@+id/checkBox2"
@@ -81,7 +82,7 @@
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="@+id/group2"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.25" />
 
         <CheckBox
             android:id="@+id/checkBox4"
@@ -100,7 +101,7 @@
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="@+id/group2"
             app:layout_constraintTop_toTopOf="@+id/group2"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/group2"
@@ -109,6 +110,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

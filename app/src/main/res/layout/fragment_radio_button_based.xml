@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/p5hatty"
+            android:minHeight="48dp"
             android:rotationX="12"
             android:rotationY="12"
             android:text="@string/txt_botton_responder"
@@ -39,7 +40,7 @@
                 android:id="@+id/radioButton3"
                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:fontFamily="@font/p5hatty"
                 android:rotationX="-4"
@@ -47,12 +48,12 @@
                 android:text="Respuesta 1"
                 android:textAlignment="textStart"
                 android:textColor="?android:textColorPrimary"
-                android:textSize="18sp" />
+                android:textSize="29sp" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:fontFamily="@font/p5hatty"
                 android:layoutDirection="rtl"
@@ -61,31 +62,31 @@
                 android:text="Respuesta 2"
                 android:textAlignment="textEnd"
                 android:textColor="?android:textColorPrimary"
-                android:textSize="18sp" />
+                android:textSize="29sp" />
 
             <RadioButton
                 android:id="@+id/radioButton6"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:fontFamily="@font/p5hatty"
                 android:text="Respuesta 3"
                 android:textColor="?android:textColorPrimary"
-                android:textSize="18sp" />
+                android:textSize="29sp" />
 
             <RadioButton
                 android:id="@+id/radioButton7"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:fontFamily="@font/p5hatty"
-                android:text="Respuesta 4"
-                android:textAlignment="textEnd"
                 android:layoutDirection="rtl"
                 android:rotationX="4"
                 android:rotationY="4"
+                android:text="Respuesta 4"
+                android:textAlignment="textEnd"
                 android:textColor="?android:textColorPrimary"
-                android:textSize="18sp" />
+                android:textSize="29sp" />
 
         </RadioGroup>
     </androidx.constraintlayout.widget.ConstraintLayout>
