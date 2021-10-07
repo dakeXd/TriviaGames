@@ -116,6 +116,7 @@ public class ImageButtonBasedFragment extends QuestionFragment {
             activity.updateQuestion(question, questionImage);
             for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
                 Resources resources = getResources();
+                System.out.println(questions[i]);
                 Drawable imageId = resources.getDrawable(resources.getIdentifier(questions[i], "drawable", getContext().getPackageName()));
                 buttons[i].setImageDrawable(imageId);
             }

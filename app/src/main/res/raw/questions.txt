@@ -128,8 +128,8 @@ Haunted Castle#0
 3
 ¿Cuál de estos juegos se ha estrenado en 2021?
 deadoralive6_foto#0
-darksiders3_foto#
-pillarsodtheeternity_foto
-biomutant_foto
+darksiders3_foto#0
+pillarsodtheeternity_foto#0
+biomutant_foto#1
 
 //1-ButtonBasedQuestion, 2-CheckBoxBasedQuestion(multiOption), 3-ImageButtonBasedQuestion, 4-RadioButtonBasedQuestion, 5-SpinnerBasedQuestion. 1-Respuesta Correcta, 0-Respuesta incorrecta
