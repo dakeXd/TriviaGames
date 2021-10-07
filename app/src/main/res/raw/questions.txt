@@ -90,13 +90,13 @@ John#0
 Comandante Total#0
 Soldado Maestro#0
 5
-¿En que año fue lanzado Super Mario 64?
+¿Cuando fue lanzado Super Mario 64?
 1995#0
 1996#1
 1998#0
 1999#0
 1
-¿Como se llama el fundador de la compañía Nintendo?#fuyasiro_foto
+¿Como se llama el fundador de Nintendo?#fuyasiro_foto
 Shigeru Miyamoto#0
 Satoru Iwata#0
 Hideo Kojima#0
@@ -108,7 +108,7 @@ mario_foto#0
 luigi_foto#0
 peach_foto#0
 1
-“No hay opciones. Nada salvo una linea recta". ¿En que juego se dice esta frase?
+"No hay opciones. Nada salvo una linea recta". ¿En que juego se dice esta frase?
 Assasins Creed#0
 Super Mario World#0
 Max Payne#1
@@ -120,7 +120,7 @@ Ryse: Son of Rome#0
 The Witcher 3#1
 Soul Blade#1
 1
-“¿Que es un hombre? ¡Un miserable monton de secretos! ¡Pero basta de hablar! ¡Atento a ti!”. ¿A qué famoso videojuego de 1997 pertenece esta frase?
+"¿Que es un hombre? ¡Un miserable monton de secretos! ¡Pero basta de hablar! ¡Atento a ti!". ¿A qué famoso videojuego de 1997 pertenece esta frase?
 Dracula: Resurrection#0
 Vampire Killer#0
 Castlevania#1
@@ -129,7 +129,7 @@ Haunted Castle#0
 ¿Cual de estos juegos se ha estrenado en 2021?
 deadoralive6_foto#0
 darksiders3_foto#0
-pillarsodtheeternity_foto#0
+pillarsoftheeternity_foto#0
 biomutant_foto#1
 1
 ¿Cual es el nombre del siguiente personaje?#travistouchdown_foto
