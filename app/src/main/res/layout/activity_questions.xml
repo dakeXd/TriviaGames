@@ -95,20 +95,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_question"
-        app:layout_constraintVertical_bias="0.22"
+        app:layout_constraintVertical_bias="0.120000005"
         tools:layout="@layout/fragment_button_based" />
 
     <ImageView
         android:id="@+id/imageView_pregunta"
         android:layout_width="224dp"
         android:layout_height="200dp"
-        android:layout_marginTop="352dp"
         android:contentDescription="@string/image"
-        android:scaleType="fitXY"
+        android:cropToPadding="true"
+        android:padding="4dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/background_image2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView"
+        app:layout_constraintVertical_bias="0.18"
         app:srcCompat="@drawable/logo_trivia" />
 
     <androidx.constraintlayout.widget.Guideline
