@@ -108,28 +108,28 @@ mario_foto#0
 luigi_foto#0
 peach_foto#0
 1
-“No hay opciones. Nada salvo una línea recta. ¿Adivinarías en qué juego se dice esta categórica frase?
+“No hay opciones. Nada salvo una linea recta. ¿Adivinarias en que juego se dice esta frase?
 Assasins Creed#0
 Super Mario World#0
 Max Payne#1
 Killer Instinct#0
 2
-Con cuál de estos juegos no aprenderías nada de historia
+Con cual de estos juegos no aprenderias nada de historia
 Age of Empires#0
 Ryse: Son of Rome#0
 The Witcher 3#1
 Soul Blade#1
 1
-“¿Qué es un hombre? ¡Un miserable montón de secretos! ¡Pero basta de hablar! ¡Atento a ti!”. ¿A qué famoso videojuego de 1997 pertenece esta frase?
+“¿Que es un hombre? ¡Un miserable monton de secretos! ¡Pero basta de hablar! ¡Atento a ti!”. ¿A qué famoso videojuego de 1997 pertenece esta frase?
 Dracula: Resurrection#0
 Vampire Killer#0
-Castlevania: Syphony og the Night#1
+Castlevania: Syphony of the Night#1
 Haunted Castle#0
 3
-¿Cuál de estos juegos se ha estrenado en 2021?
+¿Cual de estos juegos se ha estrenado en 2021?
 deadoralive6_foto#0
-darksiders3_foto#
-pillarsodtheeternity_foto
-biomutant_foto
+darksiders3_foto#0
+pillarsodtheeternity_foto#0
+biomutant_foto#1
 
 //1-ButtonBasedQuestion, 2-CheckBoxBasedQuestion(multiOption), 3-ImageButtonBasedQuestion, 4-RadioButtonBasedQuestion, 5-SpinnerBasedQuestion. 1-Respuesta Correcta, 0-Respuesta incorrecta
