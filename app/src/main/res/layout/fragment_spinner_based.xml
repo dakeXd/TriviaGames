@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
             android:fontFamily="@font/p5hatty"
+            android:minHeight="48dp"
             android:rotationX="-8"
             android:rotationY="-15"
             android:text="@string/txt_botton_responder"
