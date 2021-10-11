@@ -86,10 +86,10 @@ public class FinalScoreActivity extends AppCompatActivity {
         tv_maxPunt.setText(txt_maxScore);
         if(position>-1){
             tv_message.setTextColor(Color.GREEN);
-            tv_message.setText("Enhorabuena, has logrado una nueva puntuacion maxima, has quedado en el lugar numero " + (position+1));
+            tv_message.setText("Enhorabuena, has quedado en el lugar numero " + (position+1));
         }else{
             tv_message.setTextColor(Color.RED);
-            tv_message.setText("Lastima, no has alcanzado una puntuacion maxima, mas suerte la proxima");
+            tv_message.setText("Lastima, no has alcanzado una puntuacion maxima");
         }
 
         tv_punt.setText("Tu puntuacion ha sido: " + QuestionReader.getCorrect_questions() + "/" + QuestionReader.MAX_QUESTIONS);
