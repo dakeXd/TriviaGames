@@ -94,23 +94,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_pregunta"
+        app:layout_constraintVertical_bias="0.0"
         tools:layout="@layout/fragment_button_based" />
 
     <ImageView
         android:id="@+id/imageView_pregunta"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/border_inverted"
         android:contentDescription="@string/image"
         android:cropToPadding="true"
-        android:padding="4dp"
+        android:padding="3dip"
+        android:rotationX="4"
+        android:rotationY="8"
         android:scaleType="centerInside"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
         app:srcCompat="@drawable/fuyasiro_foto" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -146,7 +149,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.21" />
+        app:layout_constraintGuide_begin="154dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"

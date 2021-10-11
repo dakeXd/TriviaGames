@@ -1,6 +1,7 @@
 package com.example.triviagames.fragments;
 
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -109,12 +110,14 @@ public class SpinnerBasedFragment extends QuestionFragment {
     @Override
     public void checkAnswer(int answers[]) {
         if(this.answers[spinner.getSelectedItemPosition()]==1){
-            spinner.setBackgroundColor(Color.GREEN);
-            tv.setTextColor(Color.GREEN);
+            spinner.getBackground().setColorFilter(getResources().getColor(R.color.correctTint),
+                    PorterDuff.Mode.SRC_OVER);
+            tv.setTextColor(getResources().getColor(R.color.correctTint));
             tv.setText("¡Respuesta correcta!");
         }else {
-            spinner.setBackgroundColor(Color.RED);
-            tv.setTextColor(Color.RED);
+            spinner.getBackground().setColorFilter(getResources().getColor(R.color.wrongAnswer),
+                    PorterDuff.Mode.SRC_OVER);
+            tv.setTextColor(getResources().getColor(R.color.wrongAnswer));
             String respuesta = "";
             for(int i = 0; i < MAX_ANSWERS; i++){
                 if(this.answers[i]==1)

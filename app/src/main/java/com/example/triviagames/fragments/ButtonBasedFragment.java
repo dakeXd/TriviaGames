@@ -1,6 +1,7 @@
 package com.example.triviagames.fragments;
 
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -124,10 +125,12 @@ public class ButtonBasedFragment extends QuestionFragment {
     public void checkAnswer(int answers[]) {
         for(int i = 0; i < QuestionFragment.MAX_ANSWERS; i++){
             if(answers[i]==1){
-                buttons[i].setBackgroundColor(Color.RED);
+                buttons[i].getBackground().setColorFilter(getResources().getColor(R.color.wrongAnswer),
+                        PorterDuff.Mode.SRC_OVER);
             }
             if(this.answers[i] == 1){
-                buttons[i].setBackgroundColor(Color.GREEN);
+                buttons[i].getBackground().setColorFilter(getResources().getColor(R.color.correctTint),
+                        PorterDuff.Mode.SRC_OVER);
             }
             buttons[i].setOnClickListener(null);
         }

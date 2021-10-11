@@ -60,6 +60,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
+        android:backgroundTintMode="add"
         android:fontFamily="@font/p5hatty"
         android:padding="10dp"
         android:rotationX="5"

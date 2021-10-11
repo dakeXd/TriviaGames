@@ -1,6 +1,7 @@
 package com.example.triviagames.fragments;
 
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -112,10 +113,12 @@ public class RadioButtonBasedFragment extends QuestionFragment {
     public void checkAnswer(int answers[]) {
         for(int i = 0; i < QuestionFragment.MAX_ANSWERS; i++){
             if(answers[i]==1){
-                radioButtons[i].setBackgroundColor(Color.RED);
+                radioButtons[i].getBackground().setColorFilter(getResources().getColor(R.color.wrongAnswer),
+                        PorterDuff.Mode.SRC_OVER);
             }
             if(this.answers[i] == 1){
-                radioButtons[i].setBackgroundColor(Color.GREEN);
+                radioButtons[i].getBackground().setColorFilter(getResources().getColor(R.color.correctTint),
+                        PorterDuff.Mode.SRC_OVER);
             }
         }
         buttonNext.setOnClickListener(null);

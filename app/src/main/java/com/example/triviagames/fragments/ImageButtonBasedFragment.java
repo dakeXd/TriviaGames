@@ -3,6 +3,7 @@ package com.example.triviagames.fragments;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
@@ -127,11 +128,11 @@ public class ImageButtonBasedFragment extends QuestionFragment {
     public void checkAnswer(int answers[]) {
         for(int i = 0; i < QuestionFragment.MAX_ANSWERS; i++){
             if(answers[i]==1){
-                ImageViewCompat.setImageTintList(buttons[i], ColorStateList.valueOf(getResources().getColor(R.color.wrongTint)));
+                buttons[i].setColorFilter(getResources().getColor(R.color.wrongAnswer), PorterDuff.Mode.SRC_OVER);
             }
 
             if(this.answers[i] == 1){
-                ImageViewCompat.setImageTintList(buttons[i], ColorStateList.valueOf(getResources().getColor(R.color.correctTint)));
+                buttons[i].setColorFilter(getResources().getColor(R.color.correctTint), PorterDuff.Mode.SRC_OVER);
             }
             buttons[i].setOnClickListener(null);
         }
