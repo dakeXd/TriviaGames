@@ -3,6 +3,6 @@
     android:layout_height="wrap_content"
     android:textSize="30dp"
     android:padding="10dp"
-    android:textColor="@color/black"
-    android:background="@drawable/border_inverted"
+    android:textColor="@color/white"
+    android:background="@drawable/spinner_background"
     xmlns:android="http://schemas.android.com/apk/res/android" />
