@@ -2,8 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="391sp"
-    android:layout_height="369sp"
+    android:layout_width="391dp"
+    android:layout_height="369dp"
     tools:context=".fragments.CheckBoxBasedFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,7 +21,7 @@
             android:rotationY="-16"
             android:text="@string/txt_botton_responder"
             android:textColor="@color/black"
-            android:textSize="34sp"
+            android:textSize="34dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -31,15 +31,15 @@
 
         <CheckBox
             android:id="@+id/checkBox1"
-            android:layout_width="166sp"
-            android:layout_height="60sp"
+            android:layout_width="166dp"
+            android:layout_height="60dp"
             android:background="@drawable/border"
             android:fontFamily="@font/p5hatty"
             android:rotationX="8"
             android:rotationY="20"
             android:text="Respuesta 1"
             android:textColor="@color/white"
-            android:textSize="19sp"
+            android:textSize="19dp"
             app:layout_constraintBottom_toBottomOf="@+id/group2"
             app:layout_constraintEnd_toEndOf="@+id/group2"
             app:layout_constraintHorizontal_bias="0.75"
@@ -49,15 +49,15 @@
 
         <CheckBox
             android:id="@+id/checkBox3"
-            android:layout_width="166sp"
-            android:layout_height="60sp"
+            android:layout_width="166dp"
+            android:layout_height="60dp"
             android:background="@drawable/border"
             android:fontFamily="@font/p5hatty"
             android:rotationX="-8"
             android:rotationY="20"
             android:text="Respuesta 3"
             android:textColor="@color/white"
-            android:textSize="19sp"
+            android:textSize="19dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/group2"
             app:layout_constraintHorizontal_bias="0.75"
@@ -67,8 +67,8 @@
 
         <CheckBox
             android:id="@+id/checkBox2"
-            android:layout_width="166sp"
-            android:layout_height="60sp"
+            android:layout_width="166dp"
+            android:layout_height="60dp"
             android:background="@drawable/border"
             android:fontFamily="@font/p5hatty"
             android:rotationX="8"
@@ -86,8 +86,8 @@
 
         <CheckBox
             android:id="@+id/checkBox4"
-            android:layout_width="166sp"
-            android:layout_height="60sp"
+            android:layout_width="166dp"
+            android:layout_height="60dp"
             android:background="@drawable/border"
             android:fontFamily="@font/p5hatty"
             android:rotationX="-8"
@@ -95,7 +95,7 @@
             android:text="Respuesta 4"
             android:textAlignment="textStart"
             android:textColor="@color/white"
-            android:textSize="19sp"
+            android:textSize="19dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.25"

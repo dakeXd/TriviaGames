@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="30sp"
-    android:padding="10sp"
+    android:textSize="30dp"
+    android:padding="10dp"
     android:textColor="@color/black"
     android:background="@drawable/border_inverted"
     xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -2,8 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="391sp"
-    android:layout_height="369sp"
+    android:layout_width="391dp"
+    android:layout_height="369dp"
     tools:context=".fragments.ImageButtonBasedFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,8 +12,8 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="180sp"
-            android:layout_height="160sp"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
             android:background="@drawable/border_inverted"
             android:contentDescription="@string/image_example"
             android:cropToPadding="false"
@@ -29,8 +29,8 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="180sp"
-            android:layout_height="160sp"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
             android:background="@drawable/border_inverted"
             android:contentDescription="@string/image_example"
             android:cropToPadding="false"
@@ -46,8 +46,8 @@
 
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="180sp"
-            android:layout_height="160sp"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
             android:background="@drawable/border_inverted"
             android:contentDescription="@string/image_example"
             android:cropToPadding="false"
@@ -63,8 +63,8 @@
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="180sp"
-            android:layout_height="160sp"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
             android:background="@drawable/border_inverted"
             android:contentDescription="@string/image_example"
             android:cropToPadding="false"

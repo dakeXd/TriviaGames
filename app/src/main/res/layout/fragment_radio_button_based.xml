@@ -7,8 +7,8 @@
     tools:context=".fragments.RadioButtonBasedFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="391sp"
-        android:layout_height="369sp">
+        android:layout_width="391dp"
+        android:layout_height="369dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
@@ -20,7 +20,7 @@
             android:rotationX="12"
             android:rotationY="12"
             android:text="@string/txt_botton_responder"
-            android:textSize="34sp"
+            android:textSize="34dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
                 android:text="Respuesta 1"
                 android:textAlignment="textStart"
                 android:textColor="?android:textColorPrimary"
-                android:textSize="29sp" />
+                android:textSize="29dp" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
@@ -62,7 +62,7 @@
                 android:text="Respuesta 2"
                 android:textAlignment="textEnd"
                 android:textColor="?android:textColorPrimary"
-                android:textSize="29sp" />
+                android:textSize="29dp" />
 
             <RadioButton
                 android:id="@+id/radioButton6"
@@ -72,7 +72,7 @@
                 android:fontFamily="@font/p5hatty"
                 android:text="Respuesta 3"
                 android:textColor="?android:textColorPrimary"
-                android:textSize="29sp" />
+                android:textSize="29dp" />
 
             <RadioButton
                 android:id="@+id/radioButton7"
@@ -86,7 +86,7 @@
                 android:text="Respuesta 4"
                 android:textAlignment="textEnd"
                 android:textColor="?android:textColorPrimary"
-                android:textSize="29sp" />
+                android:textSize="29dp" />
 
         </RadioGroup>
     </androidx.constraintlayout.widget.ConstraintLayout>

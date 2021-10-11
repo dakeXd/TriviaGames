@@ -7,8 +7,8 @@
     tools:context=".fragments.SpinnerBasedFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="391sp"
-        android:layout_height="369sp">
+        android:layout_width="391dp"
+        android:layout_height="369dp">
 
         <Spinner
             android:id="@+id/spinner3"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bungee"
             android:textColor="?android:textColorPrimary"
-            android:textSize="16sp"
+            android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
