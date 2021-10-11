@@ -1,6 +1,5 @@
 package com.example.triviagames.fragments;
 
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 
@@ -102,6 +101,14 @@ public class SpinnerBasedFragment extends QuestionFragment {
             activity = (QuestionsActivity) getActivity();
             activity.updateQuestion(question, questionImage);
             ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item_preguntas, questions);
+            adapter.setDropDownViewResource(R.layout.spinner_item_preguntas_interior);
+            /*
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        R.array.travelreasons, R.layout.simple_spinner_item);
+adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
+spinner.setAdapter(adapter);
+             */
+
             spinner.setAdapter(adapter);
 
         }
@@ -110,13 +117,15 @@ public class SpinnerBasedFragment extends QuestionFragment {
     @Override
     public void checkAnswer(int answers[]) {
         if(this.answers[spinner.getSelectedItemPosition()]==1){
-            spinner.getBackground().setColorFilter(getResources().getColor(R.color.correctTint),
-                    PorterDuff.Mode.SRC_OVER);
+            //spinner.getBackground().setColorFilter(getResources().getColor(R.color.correctTint),
+            //        PorterDuff.Mode.OVERLAY);
             tv.setTextColor(getResources().getColor(R.color.correctTint));
+            tv.setBackground(getResources().getDrawable(R.drawable.border));
             tv.setText("¡Respuesta correcta!");
         }else {
-            spinner.getBackground().setColorFilter(getResources().getColor(R.color.wrongAnswer),
-                    PorterDuff.Mode.SRC_OVER);
+            tv.setBackground(getResources().getDrawable(R.drawable.border));
+            //spinner.getBackground().setColorFilter(getResources().getColor(R.color.wrongAnswer),
+            //        PorterDuff.Mode.OVERLAY);
             tv.setTextColor(getResources().getColor(R.color.wrongAnswer));
             String respuesta = "";
             for(int i = 0; i < MAX_ANSWERS; i++){
