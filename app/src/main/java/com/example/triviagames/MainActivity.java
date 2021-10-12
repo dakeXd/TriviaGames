@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -57,12 +58,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void startGame(){
         String nick = et_nickName.getText().toString();
+        tv_error.setText("");
+        tv_error.setBackgroundColor(Color.TRANSPARENT);
         if(nick.equals("")){
             tv_error.setText("Tienes que introducir un nombre");
+            tv_error.setBackgroundColor(Color.BLACK);
             return;
         }
         if(nick.length()>=10){
             tv_error.setText("El nombre debe tener menos de 10 caracteres");
+            tv_error.setBackgroundColor(Color.BLACK);
             return;
         }
         SharedPreferences.Editor editor = preferences.edit();
