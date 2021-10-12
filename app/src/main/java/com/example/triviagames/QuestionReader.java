@@ -22,7 +22,7 @@ import java.util.Random;
 
 public class QuestionReader {
 
-    public static final int ADDITIONAL_LINES_BY_QUESTION = 2;
+    private static final int ADDITIONAL_LINES_BY_QUESTION = 2;
     public static final int MAX_QUESTIONS = 10;
     private static int[] asked;                         //Questions index asked until now
     private static int actual_question = -1;
@@ -72,7 +72,6 @@ public class QuestionReader {
             correct_questions++;
         actual_question++;
         if(actual_question == MAX_QUESTIONS){
-            //TODO Load FinalScoreActivity
             Activity activity = fragmentManager.findFragmentByTag("FRAGMENT_QUESTION").getActivity();
             Intent i = new Intent(activity, FinalScoreActivity.class);
             activity.startActivity(i);
