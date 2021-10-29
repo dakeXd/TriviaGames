@@ -27,11 +27,12 @@ import java.util.TimerTask;
 public class QuestionsActivity extends AppCompatActivity {
 
     private TextView tv_question, tv_puntuacion;
-    private ImageView iv_question;
+    //private ImageView iv_question;
     private Button button_back;
     private View fragmentQuestion;
     private ConstraintLayout cl;
     private ConstraintSet constraintSet;
+    private FragmentContainerView multimediaFragment;
 
 
     @Override
@@ -42,7 +43,8 @@ public class QuestionsActivity extends AppCompatActivity {
 
 
         tv_question = (TextView) findViewById(R.id.tv_question);
-        iv_question = (ImageView) findViewById(R.id.imageView_pregunta);
+        //iv_question = (ImageView) findViewById(R.id.imageView_pregunta);
+        multimediaFragment = (FragmentContainerView) findViewById(R.id.MultimediaFragment);
         //iv_question.setVisibility(View.GONE);
         tv_puntuacion = (TextView) findViewById(R.id.tv_puntuacion);
         button_back = (Button) findViewById(R.id.button_back);
@@ -69,14 +71,14 @@ public class QuestionsActivity extends AppCompatActivity {
             System.out.println("BRAVO GOING DARK");
             constraintSet.connect(fragmentQuestion.getId(),ConstraintSet.TOP,tv_question.getId(),ConstraintSet.BOTTOM, 100);
             constraintSet.applyTo(cl);
-            iv_question.setVisibility(View.GONE);
+            multimediaFragment.setVisibility(View.GONE);
         }else{
-            constraintSet.connect(fragmentQuestion.getId(),ConstraintSet.TOP,iv_question.getId(),ConstraintSet.BOTTOM,24);
+            constraintSet.connect(fragmentQuestion.getId(),ConstraintSet.TOP,multimediaFragment.getId(),ConstraintSet.BOTTOM,24);
             constraintSet.applyTo(cl);
-            iv_question.setVisibility(View.VISIBLE);
-            Resources resources = getResources();
-            Drawable imageId = resources.getDrawable(resources.getIdentifier(questionImage, "drawable", getPackageName()));
-            iv_question.setImageDrawable(imageId);
+            multimediaFragment.setVisibility(View.VISIBLE);
+            //Resources resources = getResources();
+            //Drawable imageId = resources.getDrawable(resources.getIdentifier(questionImage, "drawable", getPackageName()));
+            //multimediaFragment.setImageDrawable(imageId);
         }
 
     }
