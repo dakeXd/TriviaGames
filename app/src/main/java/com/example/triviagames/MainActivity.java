@@ -8,9 +8,14 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.triviagames.database.DataBaseHelper;
+import com.example.triviagames.database.QuestionModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 startGame();
             }
         });
-
+        DataBaseHelper dbHelper = new DataBaseHelper(this);
+        //System.err.println("DATABASE NAME: " + dbHelper.getDatabaseName());
+        //DEBUG
+        //ArrayAdapter questionsAdapter = new ArrayAdapter<QuestionModel>(this, android.R.layout.simple_list_item_1, dbHelper.getAll());
+        tv_maxScore.setText(dbHelper.getAll().toString());
 
 
     }
@@ -73,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("nick", nick);
         editor.commit();
+
+
+        //Launch new Activity
         Intent i = new Intent(this, QuestionsActivity.class);
         startActivity(i);
 
