@@ -96,6 +96,7 @@ public class SpinnerBasedFragment extends QuestionFragment {
 
     @Override
     public void start(){
+        super.start();
         if(ready) {
             ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item_preguntas, questions);
             adapter.setDropDownViewResource(R.layout.spinner_item_preguntas_interior);
@@ -123,7 +124,7 @@ spinner.setAdapter(adapter);
             tv.setBackground(getResources().getDrawable(R.drawable.border));
             //spinner.getBackground().setColorFilter(getResources().getColor(R.color.wrongAnswer),
             //        PorterDuff.Mode.OVERLAY);
-            tv.setTextColor(getResources().getColor(R.color.wrongAnswer));
+            tv.setTextColor(getResources().getColor(R.color.error));
             String respuesta = "";
             for(int i = 0; i < MAX_ANSWERS; i++){
                 if(this.answers[i]==1)

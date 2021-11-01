@@ -99,6 +99,7 @@ public class RadioButtonBasedFragment extends QuestionFragment {
 
     @Override
     public void start(){
+        super.start();
         if(ready) {
             for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
                 radioButtons[i].setText(questions[i]);

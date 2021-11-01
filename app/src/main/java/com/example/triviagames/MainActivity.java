@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         preferences = getSharedPreferences("scores", Context.MODE_PRIVATE);
         String nick = preferences.getString("nick", "");
         et_nickName.setText(nick);
-        tv_error.setTextColor(getResources().getColor(R.color.wrongAnswer));
+        tv_error.setTextColor(getResources().getColor(R.color.error));
         loadMaxScorePlayers();
     }
 

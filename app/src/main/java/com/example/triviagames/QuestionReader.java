@@ -100,6 +100,7 @@ public class QuestionReader {
             ft.replace(R.id.fragmentContainerView, nextQuestionFragment, "FRAGMENT_QUESTION");
             ft.replace(R.id.MultimediaFragment, nextMultimediaFragment, "FRAGMENT_MULTIMEDIA");
             ft.commit();
+            //((QuestionsActivity) fragmentManager.findFragmentByTag("FRAGMENT_QUESTION").getActivity()).updateQuestion();
         }
     }
 

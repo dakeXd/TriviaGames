@@ -1,5 +1,6 @@
 package com.example.triviagames.fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.triviagames.QuestionReader;
+import com.example.triviagames.QuestionsActivity;
 import com.example.triviagames.R;
 
 import java.util.Timer;
@@ -110,7 +112,7 @@ public class QuestionFragment extends Fragment {
     }
 
     public void start(){
-
+        ((QuestionsActivity) getActivity()).updateQuestion();
     }
 
     public void checkAnswer(int[] answers){

@@ -29,8 +29,6 @@
             android:background="@drawable/border"
             android:fontFamily="@font/p5hatty"
             android:padding="8dp"
-            android:rotationX="-8"
-            android:rotationY="-16"
             android:text="@string/example"
             android:textAlignment="center"
             android:textColor="?android:textColorPrimary"

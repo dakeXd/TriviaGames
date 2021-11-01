@@ -111,6 +111,7 @@ public class ImageButtonBasedFragment extends QuestionFragment {
 
     @Override
     public void start(){
+        super.start();
         if(ready) {
             for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
                 Resources resources = getResources();

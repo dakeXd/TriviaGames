@@ -64,25 +64,8 @@ public class QuestionsActivity extends AppCompatActivity {
         QuestionReader.start(fm, getResources(), this);
     }
 
-    public void updateQuestion(String question, String questionImage){
+    public void updateQuestion(){
         tv_puntuacion.setText((QuestionReader.getActual_question() + 1) + "/" + QuestionReader.MAX_QUESTIONS);
-        tv_question.setText(question);
-        constraintSet = new ConstraintSet();
-        constraintSet.clone(cl);
-        if(questionImage==null){
-            System.out.println("BRAVO GOING DARK");
-            constraintSet.connect(fragmentQuestion.getId(),ConstraintSet.TOP,tv_question.getId(),ConstraintSet.BOTTOM, 100);
-            constraintSet.applyTo(cl);
-            multimediaFragment.setVisibility(View.GONE);
-        }else{
-            constraintSet.connect(fragmentQuestion.getId(),ConstraintSet.TOP,multimediaFragment.getId(),ConstraintSet.BOTTOM,24);
-            constraintSet.applyTo(cl);
-            multimediaFragment.setVisibility(View.VISIBLE);
-            //Resources resources = getResources();
-            //Drawable imageId = resources.getDrawable(resources.getIdentifier(questionImage, "drawable", getPackageName()));
-            //multimediaFragment.setImageDrawable(imageId);
-        }
-
     }
 
 
