@@ -29,10 +29,8 @@ public class QuestionFragment extends Fragment {
     public static final int TIME_MILIS_BETWEEN_QUESTIONS = 1000;
     public static final int MAX_ANSWERS = 4;
 
-    protected String question;
     protected String[] questions;
     protected int[] answers;
-    protected String questionImage;
     protected boolean ready = false;
     private Timer timer = new Timer();
 
@@ -42,22 +40,6 @@ public class QuestionFragment extends Fragment {
 
     public void setReady(boolean ready) {
         this.ready = ready;
-    }
-
-    public String getQuestionImage() {
-        return questionImage;
-    }
-
-    public void setQuestionImage(String questionImage) {
-        this.questionImage = questionImage;
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
     }
 
     public String[] getQuestions() {

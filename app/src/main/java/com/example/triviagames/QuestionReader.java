@@ -1,6 +1,7 @@
 package com.example.triviagames;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 
@@ -8,9 +9,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.triviagames.database.DataBaseHelper;
+import com.example.triviagames.database.QuestionModel;
 import com.example.triviagames.fragments.ButtonBasedFragment;
 import com.example.triviagames.fragments.CheckBoxBasedFragment;
 import com.example.triviagames.fragments.ImageButtonBasedFragment;
+import com.example.triviagames.fragments.MultimediaAudioFragment;
+import com.example.triviagames.fragments.MultimediaFragment;
+import com.example.triviagames.fragments.MultimediaImageFragment;
+import com.example.triviagames.fragments.MultimediaNoneFragment;
+import com.example.triviagames.fragments.MultimediaVideoFragment;
 import com.example.triviagames.fragments.QuestionFragment;
 import com.example.triviagames.fragments.RadioButtonBasedFragment;
 import com.example.triviagames.fragments.SpinnerBasedFragment;
@@ -18,18 +26,23 @@ import com.example.triviagames.fragments.SpinnerBasedFragment;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.List;
 import java.util.Random;
 
 public class QuestionReader {
 
     private static final int ADDITIONAL_LINES_BY_QUESTION = 2;
-    public static final int MAX_QUESTIONS = 10;
+    public static int MAX_QUESTIONS = 10;
+    public static int QUESTION_CATEGORY = -1;
+
     private static int[] asked;                         //Questions index asked until now
     private static int actual_question = -1;
     private static int correct_questions = 0;
+
     private static Random random;
     private static FragmentManager fragmentManager;
     private static Resources resources;
+    private static DataBaseHelper db;
 
     /**
      * @return the actual question number.
@@ -48,9 +61,10 @@ public class QuestionReader {
     /**
      * Restart and initialize the Question Reader variables
      */
-    public static void start(FragmentManager fm, Resources r){
+    public static void start(FragmentManager fm, Resources r, Context context){
         random = new Random();
         asked = new int[MAX_QUESTIONS];
+        db = new DataBaseHelper(context);
         for(int i = 0; i < MAX_QUESTIONS; i++){
             asked[i] = -1;
         }
@@ -78,9 +92,13 @@ public class QuestionReader {
             activity.finish();
         }else {
             //Create a new fragment, load the questions and change fragment
+            QuestionModel questionModel = loadQuestion();
+
             FragmentTransaction ft = fragmentManager.beginTransaction();
-            QuestionFragment nextFragment = loadQuestion();
-            ft.replace(R.id.fragmentContainerView, nextFragment, "FRAGMENT_QUESTION");
+            QuestionFragment nextQuestionFragment = createQuestionFragment(questionModel);
+            MultimediaFragment nextMultimediaFragment = createMultimediaFragment(questionModel);
+            ft.replace(R.id.fragmentContainerView, nextQuestionFragment, "FRAGMENT_QUESTION");
+            ft.replace(R.id.MultimediaFragment, nextMultimediaFragment, "FRAGMENT_MULTIMEDIA");
             ft.commit();
         }
     }
@@ -89,6 +107,7 @@ public class QuestionReader {
      * Load a new question from questions document
      * @return the next fragment
      */
+    /* OLD Method with txt
     private static QuestionFragment loadQuestion(){
         try {
             //Load a buffered reader from the questions document
@@ -123,6 +142,19 @@ public class QuestionReader {
             return null;
         }
     }
+    */
+    private static QuestionModel loadQuestion(){
+        List<QuestionModel> questionsList;
+        questionsList = QUESTION_CATEGORY == -1 ? db.getAll() : db.getQuestionsOfCategory(QUESTION_CATEGORY);
+
+        int nextQuestionIndex;
+        do {
+            nextQuestionIndex = random.nextInt(questionsList.size());
+        }while (!checkQuestionIndex(nextQuestionIndex));
+        asked[actual_question] = nextQuestionIndex;
+
+        return questionsList.get(nextQuestionIndex);
+    }
 
     /**
      * Check if a question index was already taken
@@ -137,11 +169,64 @@ public class QuestionReader {
         return true;
     }
 
+    private static QuestionFragment createQuestionFragment(QuestionModel questionModel){
+        QuestionFragment nextFragment;
+
+        switch (questionModel.getQuestionType()) {
+            case 2:
+                nextFragment = new CheckBoxBasedFragment();
+                break;
+            case 3:
+                nextFragment = new ImageButtonBasedFragment();
+                break;
+            case 4:
+                nextFragment = new RadioButtonBasedFragment();
+                break;
+            case 5:
+                nextFragment = new SpinnerBasedFragment();
+                break;
+            default:
+                nextFragment = new ButtonBasedFragment();
+                break;
+        }
+
+        nextFragment.setAnswers(questionModel.getCorrectAnswers());
+        nextFragment.setQuestions(questionModel.getAnswers());
+        nextFragment.setReady(true);
+
+        return nextFragment;
+    }
+
+    private static MultimediaFragment createMultimediaFragment(QuestionModel questionModel){
+        MultimediaFragment nextFragment = null;
+
+        switch (questionModel.getMultimediaType()) {
+            case 1:
+                nextFragment = new MultimediaImageFragment();
+                break;
+            case 2:
+                nextFragment = new MultimediaAudioFragment();
+                break;
+            case 3:
+                nextFragment = new MultimediaVideoFragment();
+                break;
+            default:
+                nextFragment = new MultimediaNoneFragment();
+                break;
+        }
+
+        nextFragment.setQuestion(questionModel.getQuestion());
+        nextFragment.setMultimediaSource(questionModel.getMultimediaSource());
+        nextFragment.setReady(true);
+
+        return nextFragment;
+    }
     /**
      * Create a new fragment based in the text document actual line
      * @param br the Buffered Reader reading the document
      * @return the Fragment to load
      */
+    /*
     private static QuestionFragment createFragment(BufferedReader br){
         try {
 
@@ -197,6 +282,8 @@ public class QuestionReader {
             return null;
         }
     }
+    */
+
 
 
 }

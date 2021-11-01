@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="286dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView6"
@@ -60,6 +60,8 @@
             android:id="@+id/tv_question4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="64dp"
             android:background="@drawable/border"
             android:fontFamily="@font/p5hatty"
             android:padding="8dp"
@@ -69,23 +71,22 @@
             android:textAlignment="center"
             android:textColor="?android:textColorPrimary"
             android:textSize="34dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_play"
-            app:layout_constraintEnd_toStartOf="@+id/guideline19"
-            app:layout_constraintStart_toStartOf="@+id/guideline20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_play"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/reproducir"
-            android:backgroundColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question4"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>

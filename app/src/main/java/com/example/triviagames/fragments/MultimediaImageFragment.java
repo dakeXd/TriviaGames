@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.triviagames.R;
 
@@ -26,7 +27,8 @@ public class MultimediaImageFragment extends MultimediaFragment {
     private static final String ARG_PARAM2 = "param2";
 
     private ImageView iv;
-    private View root;
+    private TextView tv;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -66,15 +68,21 @@ public class MultimediaImageFragment extends MultimediaFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        root = inflater.inflate(R.layout.fragment_multimedia_image, container, false);
+        View root = inflater.inflate(R.layout.fragment_multimedia_image, container, false);
         iv = root.findViewById(R.id.imageViewFragment);
+        tv = root.findViewById(R.id.tv_question2);
+        start();
         return root;
     }
 
     @Override
     public void start() {
-        Resources resources = root.getResources();
-        Drawable imageId = resources.getDrawable(resources.getIdentifier(multimediaSource, "drawable", root.getContext().getPackageName()));
-        iv.setImageDrawable(imageId);
+        if(ready){
+            Resources resources = getResources();
+            Drawable imageId = resources.getDrawable(resources.getIdentifier(multimediaSource, "drawable", getContext().getPackageName()));
+            iv.setImageDrawable(imageId);
+            tv.setText(question);
+        }
+
     }
 }

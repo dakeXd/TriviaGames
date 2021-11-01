@@ -1,6 +1,9 @@
 package com.example.triviagames.fragments;
 
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,9 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.triviagames.R;
+
+import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +34,7 @@ public class MultimediaAudioFragment extends MultimediaFragment {
     private MediaPlayer mp;
     private Button play_pause;
     private View root;
+    private TextView title;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -71,9 +78,22 @@ public class MultimediaAudioFragment extends MultimediaFragment {
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_multimedia_audio, container, false);
         play_pause = (Button) root.findViewById(R.id.btn_play);
+        title = (TextView) root.findViewById(R.id.tv_question4);
+        play_pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PlayPause();
+            }
+        });
+        start();
         return root;
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        mp.pause();
+    }
 
     public void PlayPause(){
 
@@ -91,12 +111,20 @@ public class MultimediaAudioFragment extends MultimediaFragment {
 
     }
 
-    public void Stop(){
-        if(mp != null){
-            mp.stop();
-            play_pause.setBackgroundResource(R.drawable.reproducir);
-            Toast.makeText(root.getContext(), "Stop", Toast.LENGTH_SHORT).show();
+    @Override
+    public void start() {
+        if(ready){
+            int resID= getResources().getIdentifier(multimediaSource, "raw", getContext().getPackageName());
+            mp = MediaPlayer.create(getContext(), resID);
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    play_pause.setBackgroundResource(R.drawable.reproducir);
+                }
+
+            });
+            title.setText(question);
         }
     }
-
 }

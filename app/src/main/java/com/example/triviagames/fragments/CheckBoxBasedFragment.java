@@ -98,9 +98,6 @@ public class CheckBoxBasedFragment extends QuestionFragment {
     @Override
     public void start(){
         if(ready) {
-            QuestionsActivity activity;
-            activity = (QuestionsActivity) getActivity();
-            activity.updateQuestion(question, questionImage);
             for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
                 checkBoxes[i].setText(questions[i]);
             }

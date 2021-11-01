@@ -112,9 +112,6 @@ public class ButtonBasedFragment extends QuestionFragment {
     @Override
     public void start(){
         if(ready) {
-            QuestionsActivity activity;
-            activity = (QuestionsActivity) getActivity();
-            activity.updateQuestion(question, questionImage);
             for (int i = 0; i < QuestionFragment.MAX_ANSWERS; i++) {
                 buttons[i].setText(questions[i]);
             }

@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 startGame();
             }
         });
-        DataBaseHelper dbHelper = new DataBaseHelper(this);
+
         //System.err.println("DATABASE NAME: " + dbHelper.getDatabaseName());
         //DEBUG
         //ArrayAdapter questionsAdapter = new ArrayAdapter<QuestionModel>(this, android.R.layout.simple_list_item_1, dbHelper.getAll());
-        tv_maxScore.setText(dbHelper.getAll().toString());
+        //tv_maxScore.setText(dbHelper.getAll().toString());
 
 
     }

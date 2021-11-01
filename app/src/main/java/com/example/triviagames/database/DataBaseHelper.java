@@ -60,6 +60,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_QUESTION_TYPE, questionModel.getQuestionType());
         cv.put(COLUMN_MULTIMEDIA_TYPE, questionModel.getMultimediaType());
         cv.put(COLUMN_MULTIMEDIA_SOURCE, questionModel.getMultimediaSource());
+        cv.put(COLUMN_QUESTION_CATEGORY, questionModel.getQuestionCategory());
         String answer = "";
         String[] answers = questionModel.getAnswers();
         for(int i = 0; i < answers.length;i++){
@@ -95,7 +96,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(query, null);
         //if true then there is elements
         if(cursor.moveToFirst()){
-            //loop throught the results and create new objects
+            //loop through the results and create new objects
             do{
                 int questionID = cursor.getInt(0);
                 int questionType = cursor.getInt(1);

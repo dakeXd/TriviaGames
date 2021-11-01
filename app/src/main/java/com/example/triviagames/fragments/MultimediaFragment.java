@@ -23,6 +23,8 @@ public class MultimediaFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     protected String multimediaSource;
+    protected String question;
+    protected boolean ready;
 
     public String getMultimediaSource() {
         return multimediaSource;
@@ -30,6 +32,22 @@ public class MultimediaFragment extends Fragment {
 
     public void setMultimediaSource(String multimediaSource) {
         this.multimediaSource = multimediaSource;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public boolean isReady() {
+        return ready;
+    }
+
+    public void setReady(boolean ready) {
+        this.ready = ready;
     }
 
     // TODO: Rename and change types of parameters
@@ -75,4 +93,6 @@ public class MultimediaFragment extends Fragment {
     }
 
     public void start(){};
+
+
 }

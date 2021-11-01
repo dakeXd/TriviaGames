@@ -1,6 +1,5 @@
 package com.example.triviagames.fragments;
 
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,38 +7,28 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import com.example.triviagames.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MultimediaVideoFragment#newInstance} factory method to
+ * Use the {@link MultimediaNoneFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MultimediaVideoFragment extends MultimediaFragment {
+public class MultimediaNoneFragment extends MultimediaFragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-
-    private View root;
-
-    private WebView webView;
-    private VideoView videoView;
-    private TextView tv;
-
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private TextView title;
 
-    public MultimediaVideoFragment() {
+    public MultimediaNoneFragment() {
         // Required empty public constructor
     }
 
@@ -49,11 +38,11 @@ public class MultimediaVideoFragment extends MultimediaFragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MultimediaVideoFragment.
+     * @return A new instance of fragment MultimediaNoneFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MultimediaVideoFragment newInstance(String param1, String param2) {
-        MultimediaVideoFragment fragment = new MultimediaVideoFragment();
+    public static MultimediaNoneFragment newInstance(String param1, String param2) {
+        MultimediaNoneFragment fragment = new MultimediaNoneFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -74,13 +63,8 @@ public class MultimediaVideoFragment extends MultimediaFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        root= inflater.inflate(R.layout.fragment_multimedia_video, container, false);
-        videoView = (VideoView) root.findViewById(R.id.vv_f);
-
-        MediaController mediaController = new MediaController(root.getContext());
-        videoView.setMediaController(mediaController);
-        tv = root.findViewById(R.id.tv_question3);
+        View root = inflater.inflate(R.layout.fragment_multimedia_none, container, false);
+        title = root.findViewById(R.id.tv_question6);
         start();
         return root;
     }
@@ -88,10 +72,7 @@ public class MultimediaVideoFragment extends MultimediaFragment {
     @Override
     public void start() {
         if(ready){
-            int rawId = getResources().getIdentifier(multimediaSource,  "raw", getContext().getPackageName());
-            String path = "android.resource://" + getContext().getPackageName() + "/" + rawId;
-            videoView.setVideoURI(Uri.parse(path));
-            tv.setText(question);
+            title.setText(question);
         }
     }
 }

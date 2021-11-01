@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.triviagames.fragments.ButtonBasedFragment;
+import com.example.triviagames.fragments.MultimediaNoneFragment;
 import com.example.triviagames.fragments.QuestionFragment;
 
 import java.util.Timer;
@@ -29,10 +30,11 @@ public class QuestionsActivity extends AppCompatActivity {
     private TextView tv_question, tv_puntuacion;
     //private ImageView iv_question;
     private Button button_back;
-    private View fragmentQuestion;
+
     private ConstraintLayout cl;
     private ConstraintSet constraintSet;
     private FragmentContainerView multimediaFragment;
+    private FragmentContainerView fragmentQuestion;
 
 
     @Override
@@ -42,13 +44,12 @@ public class QuestionsActivity extends AppCompatActivity {
 
 
 
-        tv_question = (TextView) findViewById(R.id.tv_question);
         //iv_question = (ImageView) findViewById(R.id.imageView_pregunta);
         multimediaFragment = (FragmentContainerView) findViewById(R.id.MultimediaFragment);
         //iv_question.setVisibility(View.GONE);
         tv_puntuacion = (TextView) findViewById(R.id.tv_puntuacion);
         button_back = (Button) findViewById(R.id.button_back);
-        fragmentQuestion = findViewById(R.id.fragmentContainerView);
+        fragmentQuestion = (FragmentContainerView) findViewById(R.id.fragmentContainerView);
         cl = (ConstraintLayout) findViewById(R.id.ConstraintQuestion);
 
         button_back.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +60,8 @@ public class QuestionsActivity extends AppCompatActivity {
         });
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.fragmentContainerView, new ButtonBasedFragment(), "FRAGMENT_QUESTION");
-        QuestionReader.start(fm, getResources());
+        fm.beginTransaction().replace(R.id.MultimediaFragment, new MultimediaNoneFragment(), "FRAGMENT_MULTIMEDIA");
+        QuestionReader.start(fm, getResources(), this);
     }
 
     public void updateQuestion(String question, String questionImage){

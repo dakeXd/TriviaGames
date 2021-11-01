@@ -97,9 +97,6 @@ public class SpinnerBasedFragment extends QuestionFragment {
     @Override
     public void start(){
         if(ready) {
-            QuestionsActivity activity;
-            activity = (QuestionsActivity) getActivity();
-            activity.updateQuestion(question, questionImage);
             ArrayAdapter <String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item_preguntas, questions);
             adapter.setDropDownViewResource(R.layout.spinner_item_preguntas_interior);
             /*
