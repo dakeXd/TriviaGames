@@ -139,8 +139,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         addOne(db, new QuestionModel(-1, 4, 0, 1, "¿Cuando fue lanzado Super Mario 64?", null, new String[]{"1995", "1998", "1999", "1996"}, new int[]{0,0,0,1}));
         addOne(db, new QuestionModel(-1, 4, 0, 1, "¿De que personaje busca venganza Kratos en God of war?", null, new String[]{"Atenea", "Zeus", "Ares", "Poseidon"}, new int[]{0,0,1,0}));
         addOne(db, new QuestionModel(-1, 4, 0, 1, "¿De que personaje ha luchado contra el Caballero Negro y el Genio de la Lampara?", null, new String[]{"Alex Mercer", "Sonic", "Tails", "Pit"}, new int[]{0,1,0,0}));
-        addOne(db, new QuestionModel(-1, 1, 2, 1, "¿De que videojuego es la siguiente tema?", null, new String[]{"Doom", "Super Mario Bros", "Kirby", "Mother"}, new int[]{0,1,0,0}));
-        addOne(db, new QuestionModel(-1, 3, 2, 1, "¿Cual es el personaje que habla en el siguiente audio?", "ness_audio", new String[]{"ness_image", "lucas_image", "shulk_image", "littlemac_image"}, new int[]{1,0,0,0}));
+        addOne(db, new QuestionModel(-1, 1, 2, 1, "¿De que videojuego es la siguiente tema?","kirby_audio", new String[]{"Doom", "Super Mario Bros", "Kirby", "Mother"}, new int[]{0,1,0,0}));
+        addOne(db, new QuestionModel(-1, 3, 2, 1, "¿Que personaje habla?", "ness_audio", new String[]{"ness_image", "lucas_image", "shulk_image", "littlemac_image"}, new int[]{1,0,0,0}));
         addOne(db, new QuestionModel(-1, 1, 3, 1, "¿De que videojuego es esta intro?", "hk_video", new String[]{"Follow Knight", "Hollow Knight", "Souls Knight", "Dark Knight"}, new int[]{0,1,0,0}));
 
         //Categoria Gamer
@@ -151,7 +151,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         addOne(db, new QuestionModel(-1, 1, 1, 2, "¿Como se llama la institución mental que sirve de escenario a Outlast?", "mountmassive_foto", new String[]{"Mount Massive", "Hospital Estatal de Filadelfia", "Hospital Severalls", "Hospital Whittingham"}, new int[]{1,0,0,0}));
         addOne(db, new QuestionModel(-1, 3, 0, 2, "¿Quien es el hijo adoptado de Heihachi de Tekken?", null, new String[]{"liuhachi_foto", "kazuya_foto", "kazumi_foto", "lars_foto"}, new int[]{0,1,0,0}));
         addOne(db, new QuestionModel(-1, 3, 0, 3, "¿Cual de estos juegos se ha estrenado en 2021?", null, new String[]{"deadoralive6_foto", "darksiders3_foto", "pillarsoftheeternity_foto", "biomutant_foto"}, new int[]{0,0,0,1}));
-        addOne(db, new QuestionModel(-1, 2, 0, 2, "¿En cuales de estos personajes son parte del Escuadron E?", null, new String[]{"Ragnarok", "Raz", "Minerva Victor", "Claude Wallace"}, new int[]{0,1,0,1}));
+        addOne(db, new QuestionModel(-1, 2, 0, 2, "¿Cuales de estos personajes son parte del Escuadron E?", null, new String[]{"Ragnarok", "Raz", "Minerva Victor", "Claude Wallace"}, new int[]{0,1,0,1}));
         addOne(db, new QuestionModel(-1, 1, 0, 2, "¿Como se llama el pueblo donde Joel y Ellie viven en The Last of Us 2?", null, new String[]{"Jackdoor", "Watson", "Jackson", "Marston"}, new int[]{0,0,1,0}));
         addOne(db, new QuestionModel(-1, 4, 0, 2, "Quien dijo: No elegimos como empezamos en esta vida. La verdadera grandeza es que hacemos con lo que nos toca. ", null, new String[]{"Spyro", "Victor Sullivan", "Ezio Auditore", "Geralt de Rivia"}, new int[]{0,1,0,0}));
         addOne(db, new QuestionModel(-1, 1, 0, 2, "Quien dijo: Un hombre elige, un esclavo obedece.", null, new String[]{"Sander Cohen", "John Marston", "Andrew Ryan", "John Warten"}, new int[]{0,0,1,0}));
@@ -179,8 +179,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         addOne(db, new QuestionModel(-1, 5, 0, 3, "¿Que edicion de Final Fantasy se lanzo en Play Station 1 primero?", null, new String[]{"Final Fantasy VI", "Final Fantasy VII", "Final Fantasy VIII", "Final Fantasy V"}, new int[]{0,1,0,0}));
         addOne(db, new QuestionModel(-1, 1, 2, 3, "¿De que videojuego es este tema?", "takeover_audio", new String[]{"Persona 3", "Ninguna de las otras es correcta", "Persona 4", "Persona 5"}, new int[]{0,1,0,0}));
         addOne(db, new QuestionModel(-1, 1, 2, 3, "¿En que videojuego suena al final es este tema?", "xenoblade_audio", new String[]{"Xenoblade Chronicles 2", "Xenoblade Chronicles", "Nino ku ni", "Uncharted 4"}, new int[]{1,0,0,0}));
-        addOne(db, new QuestionModel(-1, 1, 2, 3, "¿En que videojuego suena es este tema?", "botw_audio", new String[]{"majoramask_image", "botw_image", "ocarinaoftime_image", "mariosesentaycuatro_image"}, new int[]{0,1,0,0}));
-        addOne(db, new QuestionModel(-1, 5, 2, 3, "¿En que videojuego suena es este tema?", "acnl_audio", new String[]{"Animal Crossing", "Harvest Moon", "Stardew Valley", "Kirby"}, new int[]{0,1,0,0}));
+        addOne(db, new QuestionModel(-1, 3, 2, 3, "¿En que videojuego suena es este tema?", "botw_audio", new String[]{"majoramask_image", "botw_image", "ocarinaoftime_image", "mariosesentaycuatro_image"}, new int[]{0,1,0,0}));
+        addOne(db, new QuestionModel(-1, 5, 2, 3, "¿En que videojuego suena es este tema?", "acnl_audio", new String[]{"Animal Crossing", "Harvest Moon", "Stardew Valley", "Kirby"}, new int[]{1,0,0,0}));
         addOne(db, new QuestionModel(-1, 1, 2, 3, "¿En que videojuego suena es este tema?", "mariokart_audio", new String[]{"Team Sonic Racing", "Diddy Kong Racing", "Mario Kart 8", "Crash Team Racing"}, new int[]{0,0,1,0}));
         addOne(db, new QuestionModel(-1, 1, 3, 3, "¿De que videojuego es es esta secuencia?", "halo_video", new String[]{"Halo 3", "Lego Stars Wars", "Star Fox", "Halo 1"}, new int[]{0,0,0,1}));
 
