@@ -25,26 +25,33 @@
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/font/bungee.xml" value="0.16041666666666668" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/activity_final_score.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/activity_questions.xml" value="0.264" />
-        <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/activity_settings.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/activity_questions.xml" value="0.176" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/fragment_button_based.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/fragment_check_box_based.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/fragment_image_button_based.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/fragment_multimedia_none.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/fragment_question.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/fragment_radio_button_based.xml" value="0.4" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/fragment_spinner_based.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/spinner_item_preguntas.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Usuario/StudioProjects/TriviaGames/app/src/main/res/layout/spinner_item_preguntas_interior.xml" value="0.13020833333333334" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/drawable/border.xml" value="0.20925925925925926" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/drawable/button_persona_disabled.xml" value="0.2713541666666667" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/drawable/button_persona_enabled.xml" value="0.2713541666666667" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/drawable/button_persona_focused.xml" value="0.20925925925925926" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/drawable/button_persona_pressed.xml" value="0.2713541666666667" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/drawable/button_persona_states.xml" value="0.20925925925925926" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/activity_final_score.xml" value="0.1824074074074074" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/activity_questions.xml" value="0.2" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/activity_questions.xml" value="0.41041666666666665" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/activity_settings.xml" value="0.20625" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_button_based.xml" value="0.25" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_check_box_based.xml" value="0.20520833333333333" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_image_button_based.xml" value="0.1824074074074074" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_multimedia.xml" value="0.33" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_multimedia_audio.xml" value="0.33" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_multimedia_image.xml" value="0.20625" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_multimedia_none.xml" value="0.25" />
+        <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_multimedia_video.xml" value="0.20625" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_question.xml" value="0.23157894736842105" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_radio_button_based.xml" value="0.20520833333333333" />
         <entry key="..\:/proyectos/Android/TriviaGames/app/src/main/res/layout/fragment_spinner_based.xml" value="0.25" />
