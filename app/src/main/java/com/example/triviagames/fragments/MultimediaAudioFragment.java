@@ -92,7 +92,9 @@ public class MultimediaAudioFragment extends MultimediaFragment {
     @Override
     public void onStop() {
         super.onStop();
-        mp.pause();
+        mp.stop();
+        mp.release();
+        mp = null;
     }
 
     public void PlayPause(){

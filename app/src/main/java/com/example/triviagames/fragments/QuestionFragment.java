@@ -1,6 +1,7 @@
 package com.example.triviagames.fragments;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -65,6 +66,7 @@ public class QuestionFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
     public QuestionFragment() {
         // Required empty public constructor
     }
@@ -104,10 +106,29 @@ public class QuestionFragment extends Fragment {
     }
 
     public boolean isCorrect(int[] answers){
+        MediaPlayer mp;
         for(int i = 0; i < MAX_ANSWERS; i++){
-            if(answers[i]!=this.answers[i])
+            if(answers[i]!=this.answers[i]){
+                mp = MediaPlayer.create(getContext(), R.raw.incorrect_audio);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mp.release();
+                    }
+                });
                 return false;
+            }
+
         }
+        mp = MediaPlayer.create(getContext(), R.raw.correct_audio);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mp.release();
+            }
+        });
         return true;
     }
 
