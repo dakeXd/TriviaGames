@@ -9,6 +9,9 @@ import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.triviagames.database.DataBaseHelper;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -31,6 +34,7 @@ public class SettingsActivity extends AppCompatActivity {
     private Button tipoTodos;
 
     private Button buttonBack;
+    private Button buttonReset;
 
     private Button focusCantidad;
     private Button focusTipo;
@@ -75,6 +79,7 @@ public class SettingsActivity extends AppCompatActivity {
         tipo3 = (Button) findViewById(R.id.buttonSettings5);
         tipoTodos = (Button) findViewById(R.id.buttonSettings6);
         buttonBack = (Button) findViewById(R.id.buttonSettingsBack);
+        buttonReset = (Button) findViewById(R.id.buttonReset);
 
         cantidad1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,6 +137,12 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteDatabase(DataBaseHelper.DB_Name);
+            }
+        });
         preferences = getSharedPreferences("scores", Context.MODE_PRIVATE);
 
         if(QuestionReader.QUESTION_CATEGORY == type1)
