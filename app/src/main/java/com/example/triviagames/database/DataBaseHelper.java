@@ -136,7 +136,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         addOne(db, new QuestionModel(-1, 5, 0, 1, "¿Que instrumento de viento suele usar Link de The Legend of Zelda?", null, new String[]{"Flauta", "Ocarina", "Saxofón", "Armonica"}, new int[]{0,1,0,0}));
         addOne(db, new QuestionModel(-1, 4, 0, 1, "¿De que personaje busca venganza Kratos en God of war?", null, new String[]{"Atenea", "Zeus", "Ares", "Poseidon"}, new int[]{0,0,1,0}));
         addOne(db, new QuestionModel(-1, 4, 0, 1, "¿Como se llama el protagonista de Halo?", null, new String[]{"John", "Soldado Maestro", "Jefe Maestro", "Comandante Total"}, new int[]{0,0,1,0}));
-        addOne(db, new QuestionModel(-1, 4, 0, 1, "¿Cuando fue lanzado Super Mario 64?", null, new String[]{"1995", "1998", "1999", "1996"}, new int[]{0,0,0,1}));
+        addOne(db, new QuestionModel(-1, 5, 0, 1, "¿Cuando fue lanzado Super Mario 64?", null, new String[]{"1995", "1998", "1999", "1996"}, new int[]{0,0,0,1}));
         addOne(db, new QuestionModel(-1, 4, 0, 1, "¿De que personaje busca venganza Kratos en God of war?", null, new String[]{"Atenea", "Zeus", "Ares", "Poseidon"}, new int[]{0,0,1,0}));
         addOne(db, new QuestionModel(-1, 4, 0, 1, "¿De que personaje ha luchado contra el Caballero Negro y el Genio de la Lampara?", null, new String[]{"Alex Mercer", "Sonic", "Tails", "Pit"}, new int[]{0,1,0,0}));
         addOne(db, new QuestionModel(-1, 1, 2, 1, "¿De que videojuego es la siguiente tema?","kirby_audio", new String[]{"Doom", "Super Mario Bros", "Kirby", "Mother"}, new int[]{0,1,0,0}));
