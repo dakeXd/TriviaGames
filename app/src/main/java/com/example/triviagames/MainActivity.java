@@ -8,14 +8,9 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.triviagames.database.DataBaseHelper;
-import com.example.triviagames.database.QuestionModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText et_nickName;
     private Button button_start;
+    private Button button_settings;
     private TextView tv_maxScore;
     private TextView tv_error;
     private SharedPreferences preferences;
@@ -38,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
                 startGame();
             }
         });
-
+        button_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startSettings();
+            }
+        });
         //System.err.println("DATABASE NAME: " + dbHelper.getDatabaseName());
         //DEBUG
         //ArrayAdapter questionsAdapter = new ArrayAdapter<QuestionModel>(this, android.R.layout.simple_list_item_1, dbHelper.getAll());
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        loadMaxScorePlayers();
+        loadPreferences();
     }
 
     private void initValues(){
@@ -58,11 +59,10 @@ public class MainActivity extends AppCompatActivity {
         button_start = findViewById(R.id.button_start);
         tv_maxScore = findViewById(R.id.textView_maxScore);
         tv_error = findViewById(R.id.textView_error);
+        button_settings = findViewById(R.id.button_settings);
         preferences = getSharedPreferences("scores", Context.MODE_PRIVATE);
-        String nick = preferences.getString("nick", "");
-        et_nickName.setText(nick);
         tv_error.setTextColor(getResources().getColor(R.color.error));
-        loadMaxScorePlayers();
+        loadPreferences();
     }
 
     private void startGame(){
@@ -90,10 +90,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void loadMaxScorePlayers(){
+    public void startSettings(){
+        Intent i = new Intent(this, SettingsActivity.class);
+        startActivity(i);
+    }
+
+    private void loadPreferences(){
         String txt_maxScore = "Puntuaciones maximas:\n";
         for(int i = 1; i <= MAX_SCORES_AMOUNT; i++)
             txt_maxScore += "\n" + i + "- " + preferences.getString("txt_max" + i, "") + " " +  preferences.getString("punt_max" + i, "") + "\n";
         tv_maxScore.setText(txt_maxScore);
+        String nick = preferences.getString("nick", "");
+        et_nickName.setText(nick);
+        int amount = preferences.getInt("numPreguntas", 10);
+        int type = preferences.getInt("category", -1);
+        QuestionReader.MAX_QUESTIONS = amount;
+        QuestionReader.QUESTION_CATEGORY = type;
     }
 }

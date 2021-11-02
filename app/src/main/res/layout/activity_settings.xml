@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background_new_app" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineSettings0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="146dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettings0"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:rotationX="17"
+        android:rotationY="4"
+        android:text="5"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings1"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSettings1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineSettings1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineSettings2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineSettings4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettings1"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:rotationX="-13"
+        android:rotationY="8"
+        android:text="10"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings1"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSettings2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSettings0"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettings2"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:rotationX="-8"
+        android:rotationY="-13"
+        android:text="15"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSettings1"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettings3"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:rotationX="-17"
+        android:rotationY="-8"
+        android:text="Noob"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSettings4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettings4"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:rotationX="17"
+        android:rotationY="-13"
+        android:text="Normal"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSettings5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSettings3"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettings5"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:rotationX="17"
+        android:rotationY="13"
+        android:text="Pro"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSettings4"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettings6"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:rotationX="4"
+        android:rotationY="13"
+        android:text="Todas"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSettings4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSettingsBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/p5hatty"
+        android:padding="10dp"
+        android:rotationX="25"
+        android:rotationY="10"
+        android:text="@string/back"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:fontFamily="@font/p5hatty"
+        android:padding="8dp"
+        android:text="Cantidad de preguntas"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSettingsBack" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:fontFamily="@font/p5hatty"
+        android:padding="8dp"
+        android:text="Tipo de preguntas"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSettings4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineSettings1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

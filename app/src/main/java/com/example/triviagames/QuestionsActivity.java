@@ -3,31 +3,20 @@ package com.example.triviagames;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.app.Activity;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.triviagames.fragments.ButtonBasedFragment;
 import com.example.triviagames.fragments.MultimediaNoneFragment;
-import com.example.triviagames.fragments.QuestionFragment;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class QuestionsActivity extends AppCompatActivity {
 
-    private TextView tv_question, tv_puntuacion;
+    private TextView tv_question, tv_puntuacion, tv_acertadas;
     //private ImageView iv_question;
     private Button button_back;
 
@@ -48,6 +37,7 @@ public class QuestionsActivity extends AppCompatActivity {
         multimediaFragment = (FragmentContainerView) findViewById(R.id.MultimediaFragment);
         //iv_question.setVisibility(View.GONE);
         tv_puntuacion = (TextView) findViewById(R.id.tv_puntuacion);
+        tv_acertadas = (TextView) findViewById(R.id.tv_correct);
         button_back = (Button) findViewById(R.id.button_back);
         fragmentQuestion = (FragmentContainerView) findViewById(R.id.fragmentContainerView);
         cl = (ConstraintLayout) findViewById(R.id.ConstraintQuestion);
@@ -66,6 +56,7 @@ public class QuestionsActivity extends AppCompatActivity {
 
     public void updateQuestion(){
         tv_puntuacion.setText((QuestionReader.getActual_question() + 1) + "/" + QuestionReader.MAX_QUESTIONS);
+        tv_acertadas.setText(QuestionReader.getCorrect_questions() + "");
     }
 
 
